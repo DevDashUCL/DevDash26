@@ -178,18 +178,18 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="#timeline" className="hover:underline">
-                    Timeline
+                  <a href="#tracks" className="hover:underline">
+                    Tracks
+                  </a>
+                </li>
+                <li>
+                  <a href="#schedule" className="hover:underline">
+                    Schedule
                   </a>
                 </li>
                 <li>
                   <a href="#prizes" className="hover:underline">
                     Prizes
-                  </a>
-                </li>
-                <li>
-                  <a href="#register" className="hover:underline">
-                    Register
                   </a>
                 </li>
               </ul>

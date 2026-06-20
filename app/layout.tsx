@@ -8,8 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DevForge 2026 — Annual Campus Hackathon",
-  description: "48 hours of building, learning, and breaking things. Unleash your inner developer.",
+  title: "DevDash 2026 — Annual Campus Hackathon",
+  description:
+    "6 hours of building, learning, and breaking things. Unleash your inner developer.",
 };
 
 export default function RootLayout({
