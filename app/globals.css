@@ -52,6 +52,7 @@ nav {
 .nav-links {
     display: flex;
     gap: 1.75rem;
+    align-items: center;
 }
 .nav-links a {
     font-size: 0.85rem;
@@ -321,7 +322,7 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .nav-links {
+    .nav-link {
         display: none;
     }
     .info-cards {

@@ -6,10 +6,18 @@ export default function Home() {
       <nav>
         <span className="nav-logo">DevDash 2026</span>
         <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#tracks">Tracks</a>
-          <a href="#schedule">Schedule</a>
-          <a href="#prizes">Prizes</a>
+          <a className="nav-link" href="#about">
+            About
+          </a>
+          <a className="nav-link" href="#tracks">
+            Tracks
+          </a>
+          <a className="nav-link" href="#schedule">
+            Schedule
+          </a>
+          <a className="nav-link" href="#prizes">
+            Prizes
+          </a>
           <a
             href="https://forms.gle/e7YfuG6DT2M2aaTNA"
             target="_blank"
@@ -104,24 +112,20 @@ export default function Home() {
         </div>
         <div className="schedule-table">
           <div className="schedule-row">
-            <span className="schedule-time">Friday, 5:00 PM</span>
-            <span className="schedule-event">
-              Opening Ceremony & Team Matching
-            </span>
+            <span className="schedule-time">Week 1</span>
+            <span className="schedule-event">TBD</span>
           </div>
           <div className="schedule-row">
-            <span className="schedule-time">Friday, 6:30 PM</span>
-            <span className="schedule-event">Hacking Begins & Dinner</span>
+            <span className="schedule-time">Week 2</span>
+            <span className="schedule-event">TBD</span>
           </div>
           <div className="schedule-row">
-            <span className="schedule-time">Saturday, 10:00 AM</span>
-            <span className="schedule-event">
-              Technical Mentorship Checkpoints
-            </span>
+            <span className="schedule-time">Week 3</span>
+            <span className="schedule-event">TBD</span>
           </div>
           <div className="schedule-row">
-            <span className="schedule-time">Sunday, 2:00 PM</span>
-            <span className="schedule-event">Code Freeze & Presentations</span>
+            <span className="schedule-time">Week 4</span>
+            <span className="schedule-event">TBD</span>
           </div>
         </div>
       </section>
@@ -132,7 +136,7 @@ export default function Home() {
           <h2>Prizes</h2>
         </div>
         <div className="prizes-box">
-          <div className="prizes-amount">🎁 Over $2,500 in prizes</div>
+          <div className="prizes-amount">🎁 TBD</div>
           <p className="prizes-desc">
             Top teams secure technical equipment upgrades, exclusive internship
             interview opportunities, and custom high-performance peripheral
@@ -141,7 +145,7 @@ export default function Home() {
         </div>
       </section>
       <div className="footer-cta">
-        <p>Registration closes July 18, 2026. Spaces are limited.</p>
+        <p>Spaces are limited.</p>
         <a
           href="https://forms.gle/e7YfuG6DT2M2aaTNA"
           target="_blank"
