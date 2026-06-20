@@ -83,14 +83,6 @@ export default function Home() {
             </p>
           </div>
           <div className="track-card">
-            <div className="track-icon">🎮</div>
-            <div className="track-name">Interactive Systems & Gaming</div>
-            <p className="track-desc">
-              Develop engaging mechanics, innovative physics simulators, or
-              collaborative networking integrations for modern systems.
-            </p>
-          </div>
-          <div className="track-card">
             <div className="track-icon">🚀</div>
             <div className="track-name">Open Innovation</div>
             <p className="track-desc">
