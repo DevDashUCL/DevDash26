@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
@@ -13,18 +15,17 @@ export default function Home() {
           </a>
         </div>
       </nav>
-
       <div className="hero">
         <div className="hero-eyebrow">Annual Campus Hackathon</div>
         <h1>DevDash 2026</h1>
         <p className="hero-sub">
-          48 hours of building, learning, and breaking things. Unleash your
-          inner developer.
+          6 hours of building, learning, and breaking things. Unleash your inner
+          developer.
         </p>
         <div className="info-cards">
           <div className="info-card">
             <div className="label">When</div>
-            <div className="value">July 24–26, 2026</div>
+            <div className="value">September 2026</div>
           </div>
           <div className="info-card">
             <div className="label">Where</div>
@@ -32,7 +33,7 @@ export default function Home() {
           </div>
           <div className="info-card">
             <div className="label">Team size</div>
-            <div className="value">2–4 Members</div>
+            <div className="value">2–5 Members</div>
           </div>
         </div>
         <a
@@ -43,9 +44,7 @@ export default function Home() {
           Register your team →
         </a>
       </div>
-
       <hr className="divider" />
-
       <section id="about">
         <div className="section-header">
           <div className="section-bar" />
@@ -59,9 +58,7 @@ export default function Home() {
           your sandbox to create something meaningful.
         </p>
       </section>
-
       <hr className="divider" />
-
       <section id="tracks">
         <div className="section-header">
           <div className="section-bar" />
@@ -103,9 +100,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <hr className="divider" />
-
       <section id="schedule">
         <div className="section-header">
           <div className="section-bar" />
@@ -134,9 +129,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <hr className="divider" />
-
       <section id="prizes">
         <div className="section-header">
           <div className="section-bar" />
@@ -151,7 +144,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
       <div className="footer-cta">
         <p>Registration closes July 18, 2026. Spaces are limited.</p>
         <a
@@ -162,8 +154,78 @@ export default function Home() {
           Register team now
         </a>
       </div>
+      <footer className="border-t border-border bg-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Event Info */}
+            <div>
+              <h3 className="text-xl font-bold mb-3">DevDash 2026</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                DevDash is UCLs annual hackathon, bringing together students,
+                developers, designers, and innovators to build impactful
+                solutions, learn new technologies, and compete in an exciting
+                development challenge.
+              </p>
+            </div>
 
-      <footer>&copy; 2026 DevDash &mdash; Annual Campus Hackathon</footer>
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href="#about" className="hover:underline">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#timeline" className="hover:underline">
+                    Timeline
+                  </a>
+                </li>
+                <li>
+                  <a href="#prizes" className="hover:underline">
+                    Prizes
+                  </a>
+                </li>
+                <li>
+                  <a href="#register" className="hover:underline">
+                    Register
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* UCL */}
+            <div>
+              <h4 className="font-semibold mb-3">Hosted By</h4>
+
+              <Image
+                src="/ucl.png"
+                alt="Universal College Lanka"
+                width={60}
+                height={60}
+                className="h-auto w-auto mb-3 mx-auto"
+              />
+
+              <p className="text-sm text-muted-foreground">
+                Universal College Lanka (UCL)
+                <br />
+                Colombo, Sri Lanka
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © 2026 DevDash. All rights reserved.
+            </p>
+
+            <p className="text-sm text-muted-foreground">
+              Organized by UCL Student Community
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
