@@ -10,7 +10,11 @@ export default function Home() {
           <a href="#tracks">Tracks</a>
           <a href="#schedule">Schedule</a>
           <a href="#prizes">Prizes</a>
-          <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" className="nav-cta">
+          <a
+            href="https://forms.gle/e7YfuG6DT2M2aaTNA"
+            target="_blank"
+            className="nav-cta"
+          >
             Register
           </a>
         </div>
@@ -37,7 +41,7 @@ export default function Home() {
           </div>
         </div>
         <a
-          href="YOUR_GOOGLE_FORM_LINK"
+          href="https://forms.gle/e7YfuG6DT2M2aaTNA"
           target="_blank"
           className="btn-register"
         >
@@ -139,7 +143,7 @@ export default function Home() {
       <div className="footer-cta">
         <p>Registration closes July 18, 2026. Spaces are limited.</p>
         <a
-          href="YOUR_GOOGLE_FORM_LINK"
+          href="https://forms.gle/e7YfuG6DT2M2aaTNA"
           target="_blank"
           className="btn-register"
         >
