@@ -31,7 +31,7 @@ export default function Home() {
         <div className="hero-eyebrow">Annual Campus Hackathon</div>
         <h1>DevDash 2026</h1>
         <p className="hero-sub">
-          6 hours of building, learning, and breaking things. Unleash your inner
+          8 hours of building, learning, and breaking things. Unleash your inner
           developer.
         </p>
         <div className="info-cards">
@@ -41,11 +41,11 @@ export default function Home() {
           </div>
           <div className="info-card">
             <div className="label">Where</div>
-            <div className="value">Main Campus Lab & Virtual</div>
+            <div className="value">Main Campus Auditorium</div>
           </div>
           <div className="info-card">
             <div className="label">Team size</div>
-            <div className="value">2–5 Members</div>
+            <div className="value">Max 5 Members</div>
           </div>
         </div>
         <a
@@ -105,7 +105,7 @@ export default function Home() {
         </div>
       </section>
       <hr className="divider" />
-      <section id="schedule">
+      {/* <section id="schedule">
         <div className="section-header">
           <div className="section-bar" />
           <h2>The schedule</h2>
@@ -128,7 +128,7 @@ export default function Home() {
             <span className="schedule-event">TBD</span>
           </div>
         </div>
-      </section>
+      </section> */}
       <hr className="divider" />
       <section id="prizes">
         <div className="section-header">
@@ -221,7 +221,7 @@ export default function Home() {
             </p>
 
             <p className="text-sm text-muted-foreground">
-              Organized by UCL Student Community
+              Organized by UCL 
             </p>
           </div>
         </div>
