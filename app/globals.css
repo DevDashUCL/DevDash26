@@ -1,1 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;700;900&display=swap");
 @import "tailwindcss";
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #000; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+h1 {
+  font-size: clamp(48px, 9vw, 80px);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #fff 20%, #80ffb4 60%, #00ff64 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.nav-link:hover { color: #00ff64 !important; }
+.nav-cta:hover { background: #33ff88 !important; }
+.btn-reg:hover { background: #33ff88 !important; transform: translateY(-1px); }
+.btn-reg:active { transform: scale(0.98); }
+.track-card:hover { border-color: rgba(0,255,100,0.4) !important; }
+.footer-link:hover { color: #00ff64 !important; }

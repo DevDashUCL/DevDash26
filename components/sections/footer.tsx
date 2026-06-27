@@ -1,0 +1,51 @@
+import Image from "next/image";
+import { styles } from "@/lib/styles";
+
+export default function FooterSection() {
+  return (
+    <footer style={styles.footer}>
+      <div style={styles.footerGrid}>
+        <div>
+          <div style={styles.footerTitle}>DevDash 2026</div>
+          <p style={styles.footerBody}>
+            UCL's annual hackathon — bringing together students, developers,
+            designers, and innovators to build impactful solutions.
+          </p>
+        </div>
+        <div>
+          <div style={styles.footerTitle}>Quick links</div>
+          <ul style={styles.footerLinks}>
+            {["about", "schedule", "prizes"].map((link) => (
+              <li key={link}>
+                <a
+                  className="footer-link"
+                  href={`#${link}`}
+                  style={styles.footerLink}
+                >
+                  <span style={{ color: "rgba(0,255,100,0.3)" }}>→ </span>
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div style={styles.footerTitle}>Hosted by</div>
+          <Image
+            src="/ucl.png"
+            alt="Universal College Lanka"
+            width={80}
+            height={80}
+            style={{ marginBottom: 10 }}
+          />
+          <p style={styles.footerBody}>
+            UCL ICT Community
+            <br />
+            Colombo, Sri Lanka
+          </p>
+        </div>
+      </div>
+      <div style={styles.footerBottom}>© 2026 DevDash — Organized by UCL</div>
+    </footer>
+  );
+}
