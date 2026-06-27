@@ -252,8 +252,13 @@ export const styles: Record<string, CSSProperties> = {
     color: green,
     textDecoration: "none",
     lineHeight: 1.6,
-    display: "inline-block",
+    display: "block",
     marginTop: 4,
+  },
+  teamPhone: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.45)",
+    lineHeight: 1.6,
   },
   programGrid: {
     display: "flex",

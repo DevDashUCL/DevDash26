@@ -57,13 +57,15 @@ export const TEAM_CARDS = [
     icon: "\ud83d\udccb",
     name: "Shehani Mukadange",
     desc: "Event Lead",
-    contact: "shehani@gmail.com",
+    email: "shehanikav@gmail.com",
+    phone: "0742885971",
   },
   {
     icon: "\ud83d\udd04",
     name: "Mahdi Hannan",
     desc: "Program Coordinator",
-    contact: "mahdi@gmail.com",
+    email: "hannanmahdi009@gmail.com",
+    phone: "0773927351",
   },
 ];
 

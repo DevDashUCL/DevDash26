@@ -19,7 +19,8 @@ export default function Team() {
               <div style={styles.teamIcon}>{card.icon}</div>
               <div style={styles.teamName}>{card.name}</div>
               <p style={styles.teamDesc}>{card.desc}</p>
-              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${card.contact}`} target="_blank" style={styles.teamLink}>{card.contact}</a>
+              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${card.email}`} target="_blank" style={styles.teamLink}>{card.email}</a>
+              <div style={styles.teamPhone}>{card.phone}</div>
             </div>
           ))}
         </div>
