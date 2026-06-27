@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 interface CountdownState {
   d: string;
@@ -430,6 +431,13 @@ export default function DevDashLanding() {
             </div>
             <div>
               <div style={styles.footerTitle}>Hosted by</div>
+              <Image
+                src="/ucl.png"
+                alt="Universal College Lanka"
+                width={80}
+                height={80}
+                style={{ marginBottom: 10 }}
+              />
               <p style={styles.footerBody}>
                 Universal College Lanka (UCL)
                 <br />
