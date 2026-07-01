@@ -36,7 +36,7 @@ export default function FooterSection() {
             alt="Universal College Lanka"
             width={80}
             height={80}
-            style={{ marginBottom: 10 }}
+            style={{ marginBottom: 10, height: "auto" }}
           />
           <p style={styles.footerBody}>
             UCL ICT Community
