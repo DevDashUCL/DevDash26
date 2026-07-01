@@ -93,7 +93,7 @@ export default function Hero() {
       <div style={styles.hero}>
         {/* <TerminalWindow /> */}
         <div style={styles.heroEyebrow}>Annual Campus Hackathon</div>
-        <img
+        {/* <img
           src="/devdash.png"
           alt="DevDash 2026"
           style={{
@@ -101,7 +101,7 @@ export default function Hero() {
             height: "auto",
             marginBottom: 16,
           }}
-        />
+        /> */}
         <Countdown />
         <div style={styles.infoRow}>
           {["September 2026", "Main Campus Auditorium", "Max 5 Members"].map(
