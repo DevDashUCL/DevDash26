@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  basePath: '/DevDash', // only needed for project pages (username.github.io/repo-name)
+  images: { unoptimized: true }, // GH Pages can't run the image optimizer
 };
 
-export default nextConfig;
+module.exports = nextConfig;
