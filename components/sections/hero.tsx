@@ -102,10 +102,6 @@ export default function Hero() {
             marginBottom: 16,
           }}
         />
-        <p style={styles.heroSub}>
-          8 hours of building, learning, and breaking things. Unleash your inner
-          developer.
-        </p>
         <Countdown />
         <div style={styles.infoRow}>
           {["September 2026", "Main Campus Auditorium", "Max 5 Members"].map(
