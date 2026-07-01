@@ -43,7 +43,7 @@ export default function TerminalWindow() {
               <span style={styles.out}>
                 {line.out?.includes("\u2713") ? (
                   <>
-                    <span style={{ color: "#0066ff" }}>✓</span>
+                    <span style={{ color: "#00cc44" }}>✓</span>
                     {line.out.replace("\u2713", "")}
                   </>
                 ) : (

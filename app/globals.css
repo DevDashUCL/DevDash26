@@ -13,7 +13,7 @@ h1 {
   font-size: clamp(48px, 9vw, 80px);
   font-weight: 900;
   line-height: 1;
-  background: linear-gradient(135deg, #fff 20%, #80b4ff 60%, #0066ff 100%);
+  background: linear-gradient(135deg, #fff 20%, #80e6a0 60%, #00cc44 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -21,12 +21,12 @@ h1 {
 }
 
 
-.nav-link:hover { color: #0066ff !important; }
-.nav-cta:hover { background: #3388ff !important; }
-.btn-reg:hover { background: #3388ff !important; transform: translateY(-1px); }
+.nav-link:hover { color: #00cc44 !important; }
+.nav-cta:hover { background: #33dd77 !important; }
+.btn-reg:hover { background: #33dd77 !important; transform: translateY(-1px); }
 .btn-reg:active { transform: scale(0.98); }
-.track-card:hover { border-color: rgba(0,102,255,0.4) !important; }
-.footer-link:hover { color: #0066ff !important; }
+.track-card:hover { border-color: rgba(0,204,68,0.4) !important; }
+.footer-link:hover { color: #00cc44 !important; }
 
 @media (max-width: 768px) {
   .site-nav { padding: 12px 16px !important; }
