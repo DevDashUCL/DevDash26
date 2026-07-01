@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+// import TerminalWindow from "@/components/terminal-window";
 import Countdown from "@/components/countdown";
 import { styles, blue } from "@/lib/styles";
 import { REGISTER_URL } from "@/lib/constants";
@@ -90,6 +91,7 @@ export default function Hero() {
         </div>
       )}
       <div style={styles.hero}>
+        {/* <TerminalWindow /> */}
         <div style={styles.heroEyebrow}>Annual Campus Hackathon</div>
         <img
           src="/devdash.png"
