@@ -93,7 +93,15 @@ export default function Hero() {
       <div style={styles.hero}>
         <TerminalWindow />
         <div style={styles.heroEyebrow}>Annual Campus Hackathon</div>
-        <h1>DevDash 2026</h1>
+        <img
+          src="/devdash.png"
+          alt="DevDash 2026"
+          style={{
+            width: "clamp(300px, 50vw, 700px)",
+            height: "auto",
+            marginBottom: 16,
+          }}
+        />
         <p style={styles.heroSub}>
           8 hours of building, learning, and breaking things. Unleash your inner
           developer.
