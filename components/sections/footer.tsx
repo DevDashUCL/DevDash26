@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { styles } from "@/lib/styles";
+import uclLogo from "@/public/ucl.png";
 
 export default function FooterSection() {
   return (
@@ -32,7 +33,7 @@ export default function FooterSection() {
         <div>
           <div style={styles.footerTitle}>Hosted by</div>
           <Image
-            src="/ucl.png"
+            src={uclLogo}
             alt="Universal College Lanka"
             width={80}
             height={80}
