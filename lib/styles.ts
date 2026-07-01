@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 
 export const mono = '"JetBrains Mono", monospace';
-export const green = "#00ff64";
+export const blue = "#0066ff";
 
 export const styles: Record<string, CSSProperties> = {
   site: {
@@ -22,7 +22,7 @@ export const styles: Record<string, CSSProperties> = {
     alignItems: "center",
     justifyContent: "space-between",
     padding: "16px 40px",
-    borderBottom: "1px solid rgba(0,255,100,0.12)",
+    borderBottom: "1px solid rgba(0,102,255,0.12)",
     background: "rgba(6,6,8,0.75)",
     backdropFilter: "blur(12px)",
   },
@@ -30,7 +30,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 15,
     fontWeight: 700,
-    color: green,
+    color: blue,
     letterSpacing: "0.05em",
   },
   navLinks: { display: "flex", gap: 28, alignItems: "center" },
@@ -46,7 +46,7 @@ export const styles: Record<string, CSSProperties> = {
     fontSize: 12,
     fontWeight: 700,
     color: "#000",
-    background: green,
+    background: blue,
     padding: "8px 18px",
     borderRadius: 4,
     textDecoration: "none",
@@ -66,7 +66,7 @@ export const styles: Record<string, CSSProperties> = {
   },
   terminalWindow: {
     background: "rgba(10,12,10,0.85)",
-    border: "1px solid rgba(0,255,100,0.25)",
+    border: "1px solid rgba(0,102,255,0.25)",
     borderRadius: 8,
     marginBottom: 36,
     width: "100%",
@@ -76,8 +76,8 @@ export const styles: Record<string, CSSProperties> = {
     overflow: "hidden",
   },
   terminalBar: {
-    background: "rgba(0,255,100,0.06)",
-    borderBottom: "1px solid rgba(0,255,100,0.15)",
+    background: "rgba(0,102,255,0.06)",
+    borderBottom: "1px solid rgba(0,102,255,0.15)",
     padding: "8px 14px",
     display: "flex",
     alignItems: "center",
@@ -87,7 +87,7 @@ export const styles: Record<string, CSSProperties> = {
   terminalPath: {
     fontFamily: mono,
     fontSize: 11,
-    color: "rgba(0,255,100,0.5)",
+    color: "rgba(0,102,255,0.5)",
     marginLeft: 8,
   },
   terminalBody: {
@@ -98,14 +98,14 @@ export const styles: Record<string, CSSProperties> = {
     minHeight: 110,
   },
   tLine: { color: "rgba(255,255,255,0.4)" },
-  prompt: { color: green },
+  prompt: { color: blue },
   cmd: { color: "#fff" },
   out: { color: "rgba(255,255,255,0.38)" },
   cursor: {
     display: "inline-block",
     width: 8,
     height: 13,
-    background: green,
+    background: blue,
     verticalAlign: "middle",
     animation: "blink 1s step-end infinite",
   },
@@ -114,7 +114,7 @@ export const styles: Record<string, CSSProperties> = {
     fontSize: 11,
     letterSpacing: "0.2em",
     textTransform: "uppercase",
-    color: green,
+    color: blue,
     marginBottom: 16,
   },
   heroSub: {
@@ -135,8 +135,8 @@ export const styles: Record<string, CSSProperties> = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    background: "rgba(0,255,100,0.04)",
-    border: "1px solid rgba(0,255,100,0.2)",
+    background: "rgba(0,102,255,0.04)",
+    border: "1px solid rgba(0,102,255,0.2)",
     borderRadius: 6,
     padding: "14px 20px 10px",
     minWidth: 76,
@@ -145,7 +145,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 28,
     fontWeight: 700,
-    color: green,
+    color: blue,
     lineHeight: 1,
     fontVariantNumeric: "tabular-nums",
   },
@@ -154,7 +154,7 @@ export const styles: Record<string, CSSProperties> = {
     fontSize: 9,
     letterSpacing: "0.15em",
     textTransform: "uppercase",
-    color: "rgba(0,255,100,0.4)",
+    color: "rgba(0,102,255,0.4)",
     marginTop: 6,
   },
   infoRow: {
@@ -168,7 +168,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 14,
     color: "rgba(255,255,255,0.5)",
-    border: "1px solid rgba(0,255,100,0.15)",
+    border: "1px solid rgba(0,102,255,0.15)",
     borderRadius: 4,
     padding: "5px 12px",
   },
@@ -177,7 +177,7 @@ export const styles: Record<string, CSSProperties> = {
     fontSize: 13,
     fontWeight: 700,
     color: "#000",
-    background: green,
+    background: blue,
     padding: "14px 32px",
     borderRadius: 4,
     textDecoration: "none",
@@ -187,7 +187,7 @@ export const styles: Record<string, CSSProperties> = {
   },
   divider: {
     border: "none",
-    borderTop: "1px solid rgba(0,255,100,0.1)",
+    borderTop: "1px solid rgba(0,102,255,0.1)",
     margin: "0 40px",
   },
   section: {
@@ -206,7 +206,7 @@ export const styles: Record<string, CSSProperties> = {
   secBar: {
     width: 3,
     height: 28,
-    background: green,
+    background: blue,
     borderRadius: 2,
   },
   h2: { fontSize: 28, fontWeight: 700 },
@@ -229,8 +229,8 @@ export const styles: Record<string, CSSProperties> = {
   teamCard: {
     flex: "1 1 220px",
     maxWidth: 320,
-    background: "rgba(0,255,100,0.08)",
-    border: "1px solid rgba(0,255,100,0.25)",
+    background: "rgba(0,102,255,0.08)",
+    border: "1px solid rgba(0,102,255,0.25)",
     borderRadius: 8,
     padding: 20,
   },
@@ -239,7 +239,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 14,
     fontWeight: 700,
-    color: green,
+    color: blue,
     marginBottom: 4,
   },
   teamDesc: {
@@ -249,7 +249,7 @@ export const styles: Record<string, CSSProperties> = {
   },
   teamLink: {
     fontSize: 12,
-    color: green,
+    color: blue,
     textDecoration: "none",
     lineHeight: 1.6,
     display: "block",
@@ -270,8 +270,8 @@ export const styles: Record<string, CSSProperties> = {
   programCard: {
     flex: "1 1 220px",
     maxWidth: 320,
-    background: "rgba(0,255,100,0.08)",
-    border: "1px solid rgba(0,255,100,0.25)",
+    background: "rgba(0,102,255,0.08)",
+    border: "1px solid rgba(0,102,255,0.25)",
     borderRadius: 8,
     padding: 20,
   },
@@ -288,7 +288,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 15,
     fontWeight: 700,
-    color: green,
+    color: blue,
     marginBottom: 12,
   },
   programSessions: {
@@ -322,8 +322,8 @@ export const styles: Record<string, CSSProperties> = {
     textAlign: "center" as const,
   },
   prizesBox: {
-    background: "rgba(0,255,100,0.08)",
-    border: "1px solid rgba(0,255,100,0.25)",
+    background: "rgba(0,102,255,0.08)",
+    border: "1px solid rgba(0,102,255,0.25)",
     borderRadius: 8,
     padding: 32,
     maxWidth: 480,
@@ -333,7 +333,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 28,
     fontWeight: 700,
-    color: green,
+    color: blue,
     marginBottom: 12,
   },
   prizesDesc: {
@@ -361,8 +361,8 @@ export const styles: Record<string, CSSProperties> = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    background: "rgba(0,255,100,0.08)",
-    border: "1px solid rgba(0,255,100,0.2)",
+    background: "rgba(0,102,255,0.08)",
+    border: "1px solid rgba(0,102,255,0.2)",
     borderRadius: 8,
     padding: "14px 20px",
     gap: 12,
@@ -371,7 +371,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 13,
     fontWeight: 700,
-    color: green,
+    color: blue,
   },
   prizesItemRecipients: {
     fontSize: 13,
@@ -383,18 +383,18 @@ export const styles: Record<string, CSSProperties> = {
     zIndex: 2,
     textAlign: "center",
     padding: "60px 24px",
-    borderTop: "1px solid rgba(0,255,100,0.1)",
+    borderTop: "1px solid rgba(0,102,255,0.1)",
   },
   footerCtaText: {
     fontFamily: mono,
     fontSize: 13,
-    color: "rgba(0,255,100,0.5)",
+    color: "rgba(0,102,255,0.5)",
     marginBottom: 20,
   },
   footer: {
     position: "relative",
     zIndex: 2,
-    borderTop: "1px solid rgba(0,255,100,0.1)",
+    borderTop: "1px solid rgba(0,102,255,0.1)",
     padding: "48px 40px 32px",
   },
   footerGrid: {
@@ -408,7 +408,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 14,
     fontWeight: 700,
-    color: green,
+    color: blue,
     marginBottom: 12,
   },
   footerBody: {
@@ -434,7 +434,7 @@ export const styles: Record<string, CSSProperties> = {
     fontFamily: mono,
     fontSize: 11,
     color: "rgba(255,255,255,0.2)",
-    borderTop: "1px solid rgba(0,255,100,0.08)",
+    borderTop: "1px solid rgba(0,102,255,0.08)",
     paddingTop: 20,
     maxWidth: 900,
     margin: "0 auto",

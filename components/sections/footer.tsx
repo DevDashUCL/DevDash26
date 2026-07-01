@@ -22,7 +22,7 @@ export default function FooterSection() {
                   href={`#${link}`}
                   style={styles.footerLink}
                 >
-                  <span style={{ color: "rgba(0,255,100,0.3)" }}>→ </span>
+                  <span style={{ color: "rgba(0,102,255,0.3)" }}>→ </span>
                   {link}
                 </a>
               </li>

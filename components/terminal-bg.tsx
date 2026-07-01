@@ -30,7 +30,7 @@ export default function TerminalBg() {
         const ch = CHARS[Math.floor(Math.random() * CHARS.length)];
         const y = drops[i] * FONT_SIZE;
         const alpha = 0.12 + Math.random() * 0.18;
-        ctx!.fillStyle = `rgba(0,255,100,${alpha})`;
+        ctx!.fillStyle = `rgba(0,102,255,${alpha})`;
         ctx!.fillText(ch, i * FONT_SIZE, y);
         if (y > canvas!.height && Math.random() > 0.99) drops[i] = 0;
         drops[i] += 0.1;

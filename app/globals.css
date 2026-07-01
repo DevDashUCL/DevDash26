@@ -13,16 +13,26 @@ h1 {
   font-size: clamp(48px, 9vw, 80px);
   font-weight: 900;
   line-height: 1;
-  background: linear-gradient(135deg, #fff 20%, #80ffb4 60%, #00ff64 100%);
+  background: linear-gradient(135deg, #fff 20%, #80b4ff 60%, #0066ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 16px;
 }
 
-.nav-link:hover { color: #00ff64 !important; }
-.nav-cta:hover { background: #33ff88 !important; }
-.btn-reg:hover { background: #33ff88 !important; transform: translateY(-1px); }
+
+.nav-link:hover { color: #0066ff !important; }
+.nav-cta:hover { background: #3388ff !important; }
+.btn-reg:hover { background: #3388ff !important; transform: translateY(-1px); }
 .btn-reg:active { transform: scale(0.98); }
-.track-card:hover { border-color: rgba(0,255,100,0.4) !important; }
-.footer-link:hover { color: #00ff64 !important; }
+.track-card:hover { border-color: rgba(0,102,255,0.4) !important; }
+.footer-link:hover { color: #0066ff !important; }
+
+@media (max-width: 768px) {
+  .site-nav { padding: 12px 16px !important; }
+  .site-nav > div { gap: 10px !important; }
+  .nav-links-desktop { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+  .nav-mobile-menu { display: flex !important; }
+  .site-nav a.nav-cta { font-size: 11px !important; padding: 6px 12px !important; }
+}
