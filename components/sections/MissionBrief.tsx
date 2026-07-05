@@ -6,7 +6,7 @@ export default function MissionBrief() {
       <section id="about" style={styles.section}>
         <div style={styles.secHeader}>
           <div style={styles.secBar} />
-          <h2>About the hackathon</h2>
+          <h2 className="font-modern-warfare">About the hackathon</h2>
         </div>
         <p style={styles.aboutText}>
           DevDash 2026 brings together the brightest student developers,

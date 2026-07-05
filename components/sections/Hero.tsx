@@ -76,7 +76,7 @@ export default function Hero() {
         </motion.span>
 
         <motion.h1
-          className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white tracking-wider leading-[1.1]"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold font-modern-warfare text-white tracking-wider leading-[1.1]"
           variants={itemVariants}
         >
           BUILD YOUR
