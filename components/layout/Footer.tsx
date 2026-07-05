@@ -2,7 +2,7 @@ import Image from "next/image";
 import { styles } from "@/lib/styles";
 import uclLogo from "@/public/ucl.png";
 
-export default function FooterSection() {
+export default function Footer() {
   return (
     <footer style={styles.footer}>
       <div style={styles.footerGrid}>

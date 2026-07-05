@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Chakra_Petch, JetBrains_Mono } from "next/font/google";
+import { MotionConfig } from "framer-motion";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,8 +8,21 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const chakraPetch = Chakra_Petch({
+  variable: "--font-chakra-petch",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "DevDash",
+  title: "DevDash '26 | UCL's Inaugural University Hackathon",
+  description: "Join UCL ICT Club's first-ever university-wide hackathon. 10 hours. Builders of all levels welcome. Register today.",
 };
 
 export default function RootLayout({
@@ -17,8 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${inter.variable} ${chakraPetch.variable} ${jetbrainsMono.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col">
+        <MotionConfig reducedMotion="user">
+          {children}
+        </MotionConfig>
+      </body>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 import { styles } from "@/lib/styles";
 import { PRIZES } from "@/lib/constants";
 
-export default function Prizes() {
+export default function TheArsenal() {
   return (
     <>
       <section id="prizes" style={styles.section}>

@@ -1,7 +1,7 @@
 import { styles } from "@/lib/styles";
 import { TEAM_CARDS } from "@/lib/constants";
 
-export default function Team() {
+export default function MeetTheTeam() {
   return (
     <>
       <section id="team" style={styles.section}>

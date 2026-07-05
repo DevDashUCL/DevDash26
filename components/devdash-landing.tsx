@@ -1,18 +1,20 @@
 "use client";
 
 import { styles } from "@/lib/styles";
+import { Navbar } from "@/components/layout/Navbar";
 import TerminalBg from "@/components/terminal-bg";
-import Hero from "@/components/sections/hero";
-import About from "@/components/sections/about";
-import Program from "@/components/sections/program";
-import Prizes from "@/components/sections/prizes";
-import Team from "@/components/sections/team";
-import FooterSection from "@/components/sections/footer";
+import Hero from "@/components/sections/Hero";
+import MissionBrief from "@/components/sections/MissionBrief";
+import EventTimeline from "@/components/sections/EventTimeline";
+import TheArsenal from "@/components/sections/TheArsenal";
+import MeetTheTeam from "@/components/sections/MeetTheTeam";
+import Footer from "@/components/layout/Footer";
 
 export default function DevDashLanding() {
   return (
     <>
       <div style={styles.site}>
+        <Navbar />
         <TerminalBg />
 
         <div
@@ -27,11 +29,11 @@ export default function DevDashLanding() {
         />
 
         <Hero />
-        <About />
-        <Program />
-        <Prizes />
-        <Team />
-        <FooterSection />
+        <MissionBrief />
+        <EventTimeline />
+        <TheArsenal />
+        <MeetTheTeam />
+        <Footer />
       </div>
     </>
   );

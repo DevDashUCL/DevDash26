@@ -1,6 +1,6 @@
 import { styles } from "@/lib/styles";
 
-export default function About() {
+export default function MissionBrief() {
   return (
     <>
       <section id="about" style={styles.section}>

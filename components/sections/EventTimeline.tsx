@@ -1,7 +1,7 @@
 import { styles } from "@/lib/styles";
 import { PROGRAM } from "@/lib/constants";
 
-export default function Program() {
+export default function EventTimeline() {
   return (
     <>
       <section id="schedule" style={styles.section}>
