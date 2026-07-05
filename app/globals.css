@@ -15,42 +15,81 @@
   --color-green-hover: #165E2E;
 
   --font-sans: var(--font-inter), sans-serif;
-  --font-display: var(--font-chakra-petch), sans-serif;
+  --font-display: var(--font-syncopate), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { background: var(--color-bg-primary); }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: var(--color-bg-primary);
+}
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
-h1 {
-  font-size: clamp(48px, 9vw, 80px);
-  font-weight: 900;
-  line-height: 1;
-  background: linear-gradient(135deg, #fff 20%, #80e6a0 60%, #00cc44 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 16px;
+.nav-link:hover {
+  color: #00cc44 !important;
 }
 
+.nav-cta:hover {
+  background: #33dd77 !important;
+}
 
-.nav-link:hover { color: #00cc44 !important; }
-.nav-cta:hover { background: #33dd77 !important; }
-.btn-reg:hover { background: #33dd77 !important; transform: translateY(-1px); }
-.btn-reg:active { transform: scale(0.98); }
-.track-card:hover { border-color: rgba(0,204,68,0.4) !important; }
-.footer-link:hover { color: #00cc44 !important; }
+.btn-reg:hover {
+  background: #33dd77 !important;
+  transform: translateY(-1px);
+}
+
+.btn-reg:active {
+  transform: scale(0.98);
+}
+
+.track-card:hover {
+  border-color: rgba(0, 204, 68, 0.4) !important;
+}
+
+.footer-link:hover {
+  color: #00cc44 !important;
+}
 
 @media (max-width: 768px) {
-  .site-nav { padding: 12px 16px !important; }
-  .site-nav > div { gap: 10px !important; }
-  .nav-links-desktop { display: none !important; }
-  .nav-hamburger { display: flex !important; }
-  .nav-mobile-menu { display: flex !important; }
-  .site-nav a.nav-cta { font-size: 11px !important; padding: 6px 12px !important; }
+  .site-nav {
+    padding: 12px 16px !important;
+  }
+
+  .site-nav>div {
+    gap: 10px !important;
+  }
+
+  .nav-links-desktop {
+    display: none !important;
+  }
+
+  .nav-hamburger {
+    display: flex !important;
+  }
+
+  .nav-mobile-menu {
+    display: flex !important;
+  }
+
+  .site-nav a.nav-cta {
+    font-size: 11px !important;
+    padding: 6px 12px !important;
+  }
 }
