@@ -39,6 +39,12 @@ export function Navbar() {
 
         const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
+        // Observe hero section
+        const heroElement = document.getElementById("hero");
+        if (heroElement) {
+            observer.observe(heroElement);
+        }
+
         navLinks.forEach((link) => {
             const id = link.href.replace("#", "");
             const element = document.getElementById(id);
@@ -59,6 +65,8 @@ export function Navbar() {
         }
     }, [mobileMenuOpen]);
 
+    const isHidden = !scrolled || activeSection === "hero" || activeSection === "";
+
     return (
         <>
             <a
@@ -69,13 +77,16 @@ export function Navbar() {
             </a>
 
             <motion.header
-                className="fixed top-0 left-0 right-0 z-50 flex h-20 items-center justify-center transition-colors duration-300"
-                initial={{ backgroundColor: "rgba(6, 6, 8, 0)", borderBottomColor: "rgba(31, 122, 61, 0)" }}
+                className="fixed top-0 left-0 right-0 z-50 flex h-20 items-center justify-center transition-all duration-300"
+                initial={{ y: -80, opacity: 0 }}
                 animate={{
-                    backgroundColor: scrolled ? "rgba(6, 6, 8, 0.85)" : "rgba(6, 6, 8, 0)",
-                    backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
-                    borderBottomColor: scrolled ? "rgba(31, 122, 61, 0.12)" : "rgba(31, 122, 61, 0)",
+                    y: isHidden ? -80 : 0,
+                    opacity: isHidden ? 0 : 1,
+                    backgroundColor: "rgba(6, 6, 8, 0.85)",
+                    backdropFilter: "blur(12px)",
+                    borderBottomColor: "rgba(31, 122, 61, 0.12)",
                 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
                 style={{ borderBottomWidth: "1px", borderBottomStyle: "solid" }}
             >
                 <div className="w-full container mx-auto px-4 md:px-6 flex items-center justify-between h-full">

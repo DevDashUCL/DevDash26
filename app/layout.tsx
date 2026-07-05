@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Chakra_Petch, JetBrains_Mono } from "next/font/google";
+import { Inter, Syncopate, JetBrains_Mono } from "next/font/google";
 import { MotionConfig } from "framer-motion";
 import "./globals.css";
 
@@ -8,10 +8,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const chakraPetch = Chakra_Petch({
-  variable: "--font-chakra-petch",
+const syncopate = Syncopate({
+  variable: "--font-syncopate",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "700"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${chakraPetch.variable} ${jetbrainsMono.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${syncopate.variable} ${jetbrainsMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <MotionConfig reducedMotion="user">
           {children}
