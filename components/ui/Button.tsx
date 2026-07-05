@@ -1,39 +1,41 @@
-import * as React from "react";
+"use client";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: "primary" | "secondary" | "outline" | "ghost";
+import { HTMLMotionProps, motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import React from "react";
+
+interface ButtonProps extends HTMLMotionProps<"button"> {
+    variant?: "primary" | "ghost" | "outline";
     size?: "sm" | "md" | "lg";
     children: React.ReactNode;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ className = "", variant = "primary", size = "md", children, ...props }, ref) => {
-        const baseStyles = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer";
-        
+    ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
+        const baseStyles = "inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-accent-red focus:ring-offset-2 focus:ring-offset-background";
+
         const variants = {
-            primary: "bg-[#00cc44] text-black hover:bg-[#33dd77] active:scale-98 font-bold",
-            secondary: "bg-gray-800 text-white hover:bg-gray-700 active:scale-98",
-            outline: "border border-[#00cc44] text-[#00cc44] hover:bg-[#00cc44]/10 active:scale-98",
-            ghost: "text-gray-300 hover:text-white hover:bg-gray-800",
+            primary: "bg-accent-red text-white hover:bg-red-700",
+            ghost: "bg-transparent text-white hover:bg-white/10",
+            outline: "border border-border text-white hover:bg-white/5",
         };
 
         const sizes = {
-            sm: "h-9 px-3 text-xs",
-            md: "h-10 px-4 py-2 text-sm",
-            lg: "h-12 px-6 text-base",
+            sm: "h-9 px-4 text-sm",
+            md: "h-11 px-6 text-base",
+            lg: "h-14 px-8 text-lg",
         };
 
-        const variantClass = variants[variant] || variants.primary;
-        const sizeClass = sizes[size] || sizes.md;
-
         return (
-            <button
+            <motion.button
                 ref={ref}
-                className={`${baseStyles} ${variantClass} ${sizeClass} ${className}`}
+                className={cn(baseStyles, variants[variant], sizes[size], className)}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 {...props}
             >
                 {children}
-            </button>
+            </motion.button>
         );
     }
 );
