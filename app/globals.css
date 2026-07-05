@@ -17,6 +17,14 @@
   --font-sans: var(--font-inter), sans-serif;
   --font-display: var(--font-syncopate), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
+  --font-modern-warfare: var(--font-modern-warfare), sans-serif;
+
+  --animate-scan: scan 8s linear infinite;
+
+  @keyframes scan {
+    0%, 100% { top: 0%; opacity: 0.2; }
+    50% { top: 100%; opacity: 0.8; }
+  }
 }
 
 * {

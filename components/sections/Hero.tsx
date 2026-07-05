@@ -42,7 +42,7 @@ export default function Hero() {
           className="object-cover object-center"
         />
         {/* Bottom Vignette Overlay to Blend Background */}
-        <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-gradient-to-t from-[#0A0A0A] to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-linear-to-t from-[#0A0A0A] to-transparent z-10" />
       </motion.div>
 
       {/* Bottom overlay graphic (Hero-2.png) */}
@@ -76,13 +76,13 @@ export default function Hero() {
         </motion.span>
 
         <motion.h1
-          className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white tracking-wider leading-[1.1]"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold font-modern-warfare text-white tracking-wider leading-[1.1]"
           variants={itemVariants}
         >
           BUILD YOUR
           <br />
           <span className="text-signal-green-glow">SOLUTION</span>
-          <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-signal-green-glow text-[0.85em]">
+          <span className="block mt-2 text-transparent bg-clip-text bg-linear-to-r from-white via-gray-300 to-signal-green-glow text-[0.85em]">
             DEFEND THE
             <br />
             FUTURE

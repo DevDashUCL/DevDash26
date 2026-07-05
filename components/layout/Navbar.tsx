@@ -96,10 +96,10 @@ export function Navbar() {
                             <Image
                                 src="/devdash.png"
                                 alt="DevDash Logo"
-                                width={130}
-                                height={36}
+                                width={150}
+                                height={46}
                                 priority
-                                className="h-9 w-auto object-contain"
+                                className="h-20 w-auto object-contain"
                             />
                         </Link>
                     </div>
@@ -112,16 +112,14 @@ export function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className={`relative py-1 text-xs font-semibold font-mono tracking-widest transition-colors duration-200 group uppercase ${
-                                        isLinkActive ? "text-signal-green-glow" : "text-gray-400 hover:text-white"
-                                    }`}
+                                    className={`relative py-1 text-xs font-semibold font-mono tracking-widest transition-colors duration-200 group uppercase ${isLinkActive ? "text-signal-green-glow" : "text-gray-400 hover:text-white"
+                                        }`}
                                 >
                                     {link.name}
                                     {/* Hover / Active underline */}
                                     <span
-                                        className={`absolute bottom-0 left-0 w-full h-[2px] bg-signal-green-glow transition-transform duration-300 origin-left ${
-                                            isLinkActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                                        }`}
+                                        className={`absolute bottom-0 left-0 w-full h-[2px] bg-signal-green-glow transition-transform duration-300 origin-left ${isLinkActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                                            }`}
                                     />
                                 </Link>
                             );
@@ -173,9 +171,8 @@ export function Navbar() {
                                     >
                                         <Link
                                             href={link.href}
-                                            className={`font-mono text-2xl tracking-widest transition-colors block uppercase ${
-                                                isLinkActive ? "text-signal-green-glow" : "text-gray-300 hover:text-white"
-                                            }`}
+                                            className={`font-mono text-2xl tracking-widest transition-colors block uppercase ${isLinkActive ? "text-signal-green-glow" : "text-gray-300 hover:text-white"
+                                                }`}
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
                                             {link.name}
