@@ -13,24 +13,7 @@ export default function Footer() {
             designers, and innovators to build impactful solutions.
           </p>
         </div>
-        <div>
-          <div style={styles.footerTitle}>Quick links</div>
-          <ul style={styles.footerLinks}>
-            {["about", "schedule", "prizes"].map((link) => (
-              <li key={link}>
-                <a
-                  className="footer-link"
-                  href={`#${link}`}
-                  style={styles.footerLink}
-                >
-                  <span style={{ color: "rgba(0,204,68,0.3)" }}>→ </span>
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
+<div>
           <div style={styles.footerTitle}>Hosted by</div>
           <Image
             src={uclLogo}
