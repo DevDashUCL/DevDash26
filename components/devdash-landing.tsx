@@ -5,19 +5,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "@/lib/styles";
 import { Navbar } from "@/components/layout/Navbar";
 import LoadingScreen from "@/components/sections/LoadingScreen";
-import TerminalBg from "@/components/terminal-bg";
 import Hero from "@/components/sections/Hero";
-import MissionBrief from "@/components/sections/MissionBrief";
-import EventTimeline from "@/components/sections/EventTimeline";
-import TheArsenal from "@/components/sections/TheArsenal";
+import AboutDevDash from "@/components/sections/AboutDevDash";
+import Schedule from "@/components/sections/Schedule";
+import Prizes from "@/components/sections/Prizes";
 import MeetTheTeam from "@/components/sections/MeetTheTeam";
+import Faq from "@/components/sections/Faq";
+import Registration from "@/components/sections/Registration";
 import Footer from "@/components/layout/Footer";
 
 export default function DevDashLanding() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if session storage or reduced motion preferences exist
     const hasBooted = sessionStorage.getItem("devdash_booted");
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (hasBooted || prefersReduced) {
@@ -44,7 +44,6 @@ export default function DevDashLanding() {
             transition={{ duration: 1.0, ease: "easeOut" }}
           >
             <Navbar />
-            <TerminalBg />
 
             <div
               style={{
@@ -58,10 +57,12 @@ export default function DevDashLanding() {
             />
 
             <Hero />
-            <MissionBrief />
-            <EventTimeline />
-            <TheArsenal />
+            <AboutDevDash />
+            <Schedule />
+            <Prizes />
             <MeetTheTeam />
+            <Faq />
+            <Registration />
             <Footer />
           </motion.div>
         )}

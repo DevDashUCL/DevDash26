@@ -1,30 +1,13 @@
-import { styles } from "@/lib/styles";
-import { TEAM_CARDS } from "@/lib/constants";
+"use client";
+
+import React from "react";
 
 export default function MeetTheTeam() {
   return (
-    <>
-      <section id="team" style={styles.section}>
-        <div style={styles.secHeader}>
-          <div style={styles.secBar} />
-          <h2 style={styles.h2}>Meet the team</h2>
-        </div>
-        <div style={styles.teamGrid}>
-          {TEAM_CARDS.map((card) => (
-            <div
-              key={card.name}
-              className="team-card"
-              style={styles.teamCard}
-            >
-              <div style={styles.teamIcon}>{card.icon}</div>
-              <div style={styles.teamName}>{card.name}</div>
-              <p style={styles.teamDesc}>{card.desc}</p>
-              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${card.email}`} target="_blank" style={styles.teamLink}>{card.email}</a>
-              <div style={styles.teamPhone}>{card.phone}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </>
+    <section id="team" className="relative w-full py-20 bg-[#0A0A0A] flex items-center justify-center">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-white">Meet The Team Section</h2>
+      </div>
+    </section>
   );
 }

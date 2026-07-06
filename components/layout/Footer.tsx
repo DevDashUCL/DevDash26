@@ -1,35 +1,13 @@
-import Image from "next/image";
-import { styles } from "@/lib/styles";
-import uclLogo from "@/public/ucl.png";
+"use client";
+
+import React from "react";
 
 export default function Footer() {
   return (
-    <footer style={styles.footer}>
-      <div style={styles.footerGrid}>
-        <div>
-          <div style={styles.footerTitle}>DevDash 2026</div>
-          <p style={styles.footerBody}>
-            UCL's annual hackathon — bringing together students, developers,
-            designers, and innovators to build impactful solutions.
-          </p>
-        </div>
-<div>
-          <div style={styles.footerTitle}>Hosted by</div>
-          <Image
-            src={uclLogo}
-            alt="Universal College Lanka"
-            width={80}
-            height={80}
-            style={{ marginBottom: 10, height: "auto" }}
-          />
-          <p style={styles.footerBody}>
-            UCL ICT Community
-            <br />
-            Colombo, Sri Lanka
-          </p>
-        </div>
+    <footer className="relative w-full py-10 bg-[#0A0A0A] border-t border-[#2A2A2A] flex items-center justify-center">
+      <div className="text-center text-sm text-[#9A9A9A]">
+        <p>&copy; 2026 DevDash. All rights reserved.</p>
       </div>
-      <div style={styles.footerBottom}>© 2026 DevDash — Organized by UCL</div>
     </footer>
   );
 }
