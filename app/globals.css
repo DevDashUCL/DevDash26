@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;700;900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import "shadcn/dist/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -159,7 +159,7 @@ body {
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: #84CC16;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -179,6 +179,8 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-secondary: #9A9A9A;
 }
 
 .dark {
@@ -194,7 +196,7 @@ body {
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --accent: #84CC16;
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -213,6 +215,8 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-secondary: #9A9A9A;
 }
 
 @layer base {
@@ -225,4 +229,61 @@ body {
   html {
     @apply font-sans;
   }
+}
+
+/* ===== SECTION HEADER ===== */
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.section-label::before {
+  content: '//';
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.section-label::after {
+  content: '_';
+  animation: blink 1s step-end infinite;
+  color: var(--accent);
+}
+
+.section-title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #FFFFFF;
+}
+
+.section-title .highlight {
+  color: var(--accent);
+}
+
+.section-desc {
+  color: var(--text-secondary);
+  max-width: 720px;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-desc + .section-desc {
+  margin-top: 1.25rem;
 }
