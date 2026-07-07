@@ -1,104 +1,84 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import React from "react";
 import Image from "next/image";
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { y: 40, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
+import { GridScan } from "@/components/GridScan";
+import { REGISTER_URL } from "@/lib/constants";
+import { ArrowUpRight, ChevronDown, Calendar, Clock, MapPin } from "lucide-react";
+import { LimeButton, OutlineButton } from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative w-full h-screen overflow-hidden bg-[#0A0A0A] flex items-center justify-center">
-      {/* Background Image with Fade-in */}
-      <motion.div
-        className="absolute inset-0 w-full h-full z-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-      >
+    <section className="relative w-full h-screen bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 w-full h-full z-0">
+        <GridScan
+          sensitivity={0.6}
+          lineThickness={0.5}
+          linesColor="#051e0d"
+          scanColor="#84CC16"
+          scanOpacity={0.5}
+          gridScale={0.06}
+          lineStyle="solid"
+          lineJitter={0.1}
+          scanDirection="pingpong"
+          noiseIntensity={0}
+          scanGlow={0.8}
+          scanSoftness={1.7}
+          scanDuration={3}
+          scanDelay={2}
+          scanOnClick
+        />
+      </div>
+      <div className="relative z-10 flex flex-col items-center justify-center pointer-events-none px-4 max-w-full">
+        <span className="text-[11px] md:text-[13px] font-mono font-bold text-white/50 tracking-[0.2em] uppercase mb-2 select-none pointer-events-none">
+          UCL IT Club Presents
+        </span>
+        <div className="absolute top-20 md:top-50 z-20 text-xs md:text-sm font-mono tracking-[0.25em] text-white/90 flex items-center justify-center gap-1 select-none pointer-events-none">
+          <span className="text-[#84CC16] font-bold">[</span>
+          <span className="text-[#84CC16]">CODE.</span>
+          <span>COLLABORATE.</span>
+          <span>CREATE IMPACT.</span>
+          <span className="text-[#84CC16] font-bold">]</span>
+        </div>
         <Image
-          src="/Hero.png"
-          alt="DevDash Hero Background"
-          fill
+          src="/devdash.png"
+          alt="DevDash Logo"
+          width={900}
+          height={500}
           priority
-          sizes="100vw"
-          className="object-cover object-center"
+          className="w-full max-w-[500px] sm:max-w-[700px] md:max-w-[800px] h-auto object-contain drop-shadow-[0_0_60px_rgba(132,204,22,0.35)] relative z-10"
         />
-        {/* Bottom Vignette Overlay to Blend Background */}
-        <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-linear-to-t from-[#0A0A0A] to-transparent z-10" />
-      </motion.div>
-
-      {/* Bottom overlay graphic (Hero-2.png) */}
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 w-full h-[100dvh] z-20 pointer-events-none"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.6, delay: 0.3, ease: "easeOut" }}
-      >
-        <Image
-          src="/Hero-2.png"
-          alt="DevDash Hero Bottom Graphic"
-          fill
-          sizes="100vw"
-          className="object-contain object-bottom"
-        />
-      </motion.div>
-
-      {/* Hero Content Overlay (Bottom Left Corner, Smaller) */}
-      <motion.div
-        className="absolute bottom-8 left-6 md:left-12 z-30 max-w-sm md:max-w-md text-left flex flex-col items-start"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.span
-          className="text-xs md:text-sm font-semibold font-mono tracking-[0.25em] text-signal-green-glow uppercase mb-2"
-          variants={itemVariants}
-        >
-          // MISSION: INITIALIZE
-        </motion.span>
-
-        <motion.h1
-          className="text-3xl md:text-4xl lg:text-5xl font-bold font-modern-warfare text-white tracking-wider leading-[1.1]"
-          variants={itemVariants}
-        >
-          BUILD YOUR
-          <br />
-          <span className="text-signal-green-glow">SOLUTION</span>
-          <span className="block mt-2 text-transparent bg-clip-text bg-linear-to-r from-white via-gray-300 to-signal-green-glow text-[0.85em]">
-            DEFEND THE
-            <br />
-            FUTURE
+      </div>
+      <div className="absolute bottom-10 md:bottom-25 z-20 flex-col text-xs md:text-sm font-mono tracking-[0.25em] text-white/90 flex items-center justify-center gap-5 select-none pointer-events-none">
+        <div className="text-center flex flex-col gap-3 md:gap-6 items-center mt-2 md:mt-4 select-none pointer-events-none">
+          <span className="text-xs md:text-sm font-mono tracking-[0.3em] text-gray-400 uppercase">
+            A 8-Hour Hackathon To
           </span>
-        </motion.h1>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-mono font-extrabold tracking-widest text-[#84CC16] uppercase mt-2 flex items-center">
+            BUILD THE FUTURE
+            <span className="text-[#84CC16] ml-1 animate-[blink_1s_infinite]">|</span>
+          </h2>
+        </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center px-4 gap-4 mt-8 md:mt-20 w-full max-w-[500px] pointer-events-auto">
+          <LimeButton
+            onClick={() => window.open(REGISTER_URL, "_blank", "noopener,noreferrer")}
+            className="w-full sm:w-auto flex items-center gap-2"
+          >
+            REGISTER NOW <ArrowUpRight className="w-6 h-6" />
+          </LimeButton>
 
-        <motion.p
-          className="text-xs md:text-sm font-mono tracking-wider text-gray-400 uppercase mt-4 leading-relaxed max-w-sm"
-          variants={itemVariants}
-        >
-          A 8 hour hackathon to
-          <span className="block mt-1 font-bold text-signal-green-glow tracking-[0.1em] font-sans text-sm md:text-base">
-            BUILD. BATTLE. CONQUER.
-          </span>
-        </motion.p>
-      </motion.div>
+          <OutlineButton
+            onClick={() => {
+              const el = document.getElementById("about");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="w-full sm:w-auto flex items-center gap-2"
+          >
+            LEARN MORE <ChevronDown className="w-4 h-4" />
+          </OutlineButton>
+        </div>
+      </div>
     </section>
   );
 }
