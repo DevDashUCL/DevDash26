@@ -19,11 +19,6 @@ export const FAQS = [
       `You can register for DevDash 2026 by filling out the registration form available at the registration page. Make sure to provide accurate information and submit the form before the registration deadline.`,
   },
   {
-    question: "What are the prizes for DevDash 2026?",
-    answer:
-      "DevDash 2026 offers various prizes, including cash prizes and certificates for the top teams. The specific details of the prizes will be announced closer to the event date.",
-  },
-  {
     question: "Can I participate as an individual or do I need a team?",
     answer:
       "Participants can either form teams or participate individually. However, it is recommended to form a team to collaborate and leverage diverse skills during the hackathon.",

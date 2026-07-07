@@ -69,19 +69,9 @@ export const TEAM_CARDS = [
   },
 ];
 
-export interface Prize {
-  award: string;
-  recipients: string;
-}
-
-export const PRIZES: Prize[] = [
-  { award: "Cash prize", recipients: "TBD" },
-  { award: "1st Place Certificate", recipients: "For the 1st place team" },
-  { award: "2nd Place Certificate", recipients: "For the 2nd place team" },
-  { award: "3rd Place Certificate", recipients: "For the 3rd place team" },
-  {
-    award: "Participation Certificate",
-    recipients: "All participating students",
-  },
+export const PRIZES = [
+  { rank: "01", label: "1st Place", detail: "Cash Prize + Certificate" },
+  { rank: "02", label: "2nd Place", detail: "Cash Prize + Certificate" },
+  { rank: "03", label: "3rd Place", detail: "Cash Prize + Certificate" },
 ];
 
