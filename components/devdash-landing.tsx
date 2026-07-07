@@ -10,7 +10,7 @@ import AboutDevDash from "@/components/sections/AboutDevDash";
 import Schedule from "@/components/sections/Schedule";
 import Prizes from "@/components/sections/Prizes";
 import MeetTheTeam from "@/components/sections/MeetTheTeam";
-import Faq from "@/components/sections/Faq";
+import { FAQSection } from "@/components/sections/Faq";
 import Registration from "@/components/sections/Registration";
 import Footer from "@/components/layout/Footer";
 
@@ -61,7 +61,7 @@ export default function DevDashLanding() {
             <Schedule />
             <Prizes />
             <MeetTheTeam />
-            <Faq />
+            <FAQSection />
             <Registration />
             <Footer />
           </motion.div>

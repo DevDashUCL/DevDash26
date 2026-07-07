@@ -84,3 +84,4 @@ export const PRIZES: Prize[] = [
     recipients: "All participating students",
   },
 ];
+
