@@ -28,13 +28,7 @@
   --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-html,
 body {
   background: var(--color-bg-primary);
 }
@@ -223,9 +217,11 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
@@ -284,7 +280,7 @@ body {
   margin-right: auto;
 }
 
-.section-desc + .section-desc {
+.section-desc+.section-desc {
   margin-top: 1.25rem;
 }
 
