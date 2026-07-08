@@ -34,6 +34,11 @@ body {
   background: var(--color-bg-primary);
 }
 
+section {
+  padding: 6rem 2rem;
+  position: relative;
+}
+
 @keyframes blink {
 
   0%,
@@ -192,6 +197,10 @@ body {
   --sidebar-ring: oklch(0.708 0 0);
   --text-muted: rgba(255, 255, 255, 0.5);
   --text-secondary: #9A9A9A;
+  --border-hover: #3F3F46;
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.05);
 }
 
 .dark {
@@ -382,6 +391,36 @@ footer .closing {
   margin-top: 1.25rem;
 }
 
+/* ===== GLASS CARD ===== */
+
+.glass {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  position: relative;
+}
+
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-highlight), transparent);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.glass:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ===== BACKGROUND SECTIONS ===== */
+
+.bg-section-faq {
+  background: radial-gradient(ellipse at 50% 0%, rgba(34, 211, 238, 0.05) 0%, transparent 60%);
+}
+
 /* ===== FAQ ===== */
 
 .faq-list {
@@ -391,15 +430,13 @@ footer .closing {
 }
 
 .faq-item {
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: var(--radius);
   overflow: hidden;
   transition: border-color 0.2s ease;
 }
 
 .faq-item.open {
-  border-color: var(--color-accent-green-glow);
+  border-color: var(--border-hover);
 }
 
 .faq-q {
@@ -407,6 +444,7 @@ footer .closing {
   background: none;
   border: none;
   padding: 1rem 1.25rem;
+  font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--color-text-primary);
@@ -420,12 +458,13 @@ footer .closing {
 }
 
 .faq-q:hover {
-  color: var(--color-accent-green-glow);
+  color: var(--accent);
 }
 
 .faq-q .icon {
+  font-family: var(--font-mono);
   font-size: 1rem;
-  color: var(--color-accent-green-glow);
+  color: var(--accent);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
@@ -450,7 +489,7 @@ footer .closing {
 
 .faq-a p {
   padding: 0 1.25rem 1rem;
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.7;
 }
