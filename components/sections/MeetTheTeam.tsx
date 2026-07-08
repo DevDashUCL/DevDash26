@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
+import ElectricBorder from "@/components/ElectricBorder";
+import GhostCursor from "@/components/GhostCursor";
 
 const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -128,76 +130,87 @@ export default function MeetTheTeam() {
   } as const;
 
   const renderCard = (member: TeamMember) => (
-    <motion.div
-      variants={itemVariants}
-      className="relative flex flex-col items-center justify-between bg-[#111111]/30 border border-white/10 hover:border-[#00ef4f]/40 hover:shadow-[0_0_20px_rgba(0,239,79,0.06)] rounded-xl p-5 backdrop-blur-sm transition-all duration-300 w-full max-w-[270px] sm:max-w-[290px] md:max-w-[310px] h-[340px] sm:h-[370px] md:h-[390px] overflow-hidden text-center group"
+    <ElectricBorder
+      color="#00ef4f"
+      speed={0.8}
+      chaos={0.11}
+      thickness={2}
+      borderRadius={12}
+      className="w-full max-w-[270px] sm:max-w-[290px] md:max-w-[310px]"
     >
-      {/* Tech corner brackets */}
-      <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-white/20 group-hover:border-[#00ef4f]/40 transition-colors" />
-      <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-white/20 group-hover:border-[#00ef4f]/40 transition-colors" />
-      <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-white/20 group-hover:border-[#00ef4f]/40 transition-colors" />
-      <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-white/20 group-hover:border-[#00ef4f]/40 transition-colors" />
+      <motion.div
+        variants={itemVariants}
+        className="relative flex flex-col items-center bg-[#111111]/30 border border-white/10 hover:border-[#00ef4f]/40 hover:shadow-[0_0_20px_rgba(0,239,79,0.06)] rounded-xl p-4 sm:p-5 backdrop-blur-sm transition-all duration-300 w-full h-[400px] sm:h-[440px] md:h-[470px] overflow-hidden text-center group"
+      >
+        {/* Tech corner brackets */}
+        <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-white/20 group-hover:border-[#00ef4f]/40 transition-colors" />
+        <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-white/20 group-hover:border-[#00ef4f]/40 transition-colors" />
+        <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-white/20 group-hover:border-[#00ef4f]/40 transition-colors" />
+        <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-white/20 group-hover:border-[#00ef4f]/40 transition-colors" />
 
-      {/* Cyberpunk headshot / avatar placeholder (Larger size) */}
-      <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 bg-black/40 border border-white/10 group-hover:border-[#00ef4f]/30 rounded-xl shrink-0 overflow-hidden relative flex items-center justify-center transition-colors">
-        {/* Radar/pulse glow background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,239,79,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity animate-pulse" />
-        
-        {/* Animated matrix scanline */}
-        <div className="absolute inset-x-0 h-[1px] bg-[#00ef4f]/40 top-0 group-hover:animate-[scanline_2s_linear_infinite] opacity-0 group-hover:opacity-100 pointer-events-none" />
+        {/* Cyberpunk headshot / avatar placeholder (Larger portrait size) */}
+        <div className="w-full h-[220px] sm:h-[250px] md:h-[280px] bg-black/40 border border-white/10 group-hover:border-[#00ef4f]/30 rounded-xl shrink-0 overflow-hidden relative flex items-center justify-center transition-colors mb-4">
+          {/* Radar/pulse glow background */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,239,79,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity animate-pulse" />
+          
+          {/* Animated matrix scanline */}
+          <div className="absolute inset-x-0 h-[1px] bg-[#00ef4f]/40 top-0 group-hover:animate-[scanline_2s_linear_infinite] opacity-0 group-hover:opacity-100 pointer-events-none" />
 
-        {/* Futuristic profile outline */}
-        <svg className="w-16 h-16 sm:w-20 sm:h-20 text-white/10 group-hover:text-[#00ef4f]/30 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
+          {/* Futuristic profile outline */}
+          <svg className="w-16 h-16 sm:w-20 sm:h-20 text-white/10 group-hover:text-[#00ef4f]/30 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
 
-        {/* Small tech target crosshairs */}
-        <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-white/30 group-hover:border-[#00ef4f]/40" />
-        <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-white/30 group-hover:border-[#00ef4f]/40" />
-        <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-white/30 group-hover:border-[#00ef4f]/40" />
-        <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-white/30 group-hover:border-[#00ef4f]/40" />
-      </div>
+          {/* Small tech target crosshairs */}
+          <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-white/30 group-hover:border-[#00ef4f]/40" />
+          <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-white/30 group-hover:border-[#00ef4f]/40" />
+          <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-white/30 group-hover:border-[#00ef4f]/40" />
+          <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-white/30 group-hover:border-[#00ef4f]/40" />
+        </div>
 
-      {/* Details layout below avatar */}
-      <div className="flex flex-col items-center flex-1 justify-center w-full min-w-0">
-        <span className="text-[#00ef4f] text-[9px] sm:text-[10px] md:text-xs font-mono tracking-wider font-semibold uppercase block mb-1">
-          {member.role}
-        </span>
-        <h4 className="text-sm sm:text-base md:text-lg font-extrabold text-white tracking-wide uppercase font-sans line-clamp-2 max-w-[220px] mb-2 sm:mb-3 group-hover:text-[#00ef4f]/90 transition-colors">
-          {member.name}
-        </h4>
+        {/* Details layout below avatar */}
+        <div className="flex flex-col items-center flex-1 justify-between w-full min-w-0">
+          <div className="flex flex-col items-center w-full min-w-0">
+            <span className="text-[#00ef4f] text-[9px] sm:text-[10px] md:text-[11px] font-mono tracking-wider font-semibold uppercase block mb-1">
+              {member.role}
+            </span>
+            <h4 className="text-sm sm:text-base md:text-lg font-extrabold text-white tracking-wide uppercase font-sans line-clamp-2 max-w-full group-hover:text-[#00ef4f]/90 transition-colors">
+              {member.name}
+            </h4>
+          </div>
 
-        {/* Contact Links & Phone Numbers */}
-        <div className="flex flex-col items-center gap-1.5">
-          {/* Social Icons row */}
-          <div className="flex items-center gap-3 text-white/40">
-            {member.linkedin && (
-              <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-[#00ef4f] transition-colors" title="LinkedIn">
-                <LinkedinIcon className="w-4 h-4" />
-              </a>
-            )}
-            {member.github && (
-              <a href={member.github} target="_blank" rel="noopener noreferrer" className="hover:text-[#00ef4f] transition-colors" title="GitHub">
-                <GithubIcon className="w-4 h-4" />
-              </a>
-            )}
-            {member.email && (
-              <a href={`mailto:${member.email}`} className="hover:text-[#00ef4f] transition-colors" title={`Email: ${member.email}`}>
-                <Mail className="w-4 h-4" />
-              </a>
+          {/* Contact Links & Phone Numbers */}
+          <div className="flex flex-col items-center gap-1.5 mt-2">
+            {/* Social Icons row */}
+            <div className="flex items-center gap-3 text-white/40">
+              {member.linkedin && (
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-[#00ef4f] transition-colors" title="LinkedIn">
+                  <LinkedinIcon className="w-4 h-4" />
+                </a>
+              )}
+              {member.github && (
+                <a href={member.github} target="_blank" rel="noopener noreferrer" className="hover:text-[#00ef4f] transition-colors" title="GitHub">
+                  <GithubIcon className="w-4 h-4" />
+                </a>
+              )}
+              {member.email && (
+                <a href={`mailto:${member.email}`} className="hover:text-[#00ef4f] transition-colors" title={`Email: ${member.email}`}>
+                  <Mail className="w-4 h-4" />
+                </a>
+              )}
+            </div>
+            
+            {/* Compact phone number displays for Lead / Marketing & Coord */}
+            {member.phone && (
+              <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] md:text-[11px] font-mono text-white/30 group-hover:text-[#00ef4f]/40 transition-colors mt-0.5">
+                <Phone className="w-3 h-3 shrink-0" />
+                <span>{member.phone}</span>
+              </div>
             )}
           </div>
-          
-          {/* Compact phone number displays for Lead / Marketing & Coord */}
-          {member.phone && (
-            <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] md:text-[11px] font-mono text-white/30 group-hover:text-[#00ef4f]/40 transition-colors mt-0.5">
-              <Phone className="w-3 h-3 shrink-0" />
-              <span>{member.phone}</span>
-            </div>
-          )}
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </ElectricBorder>
   );
 
   return (
@@ -226,6 +239,21 @@ export default function MeetTheTeam() {
           animation: blink-cursor 1s step-end infinite;
         }
       `}} />
+
+      <GhostCursor
+        color="#00ef4f"
+        brightness={2}
+        edgeIntensity={0}
+        trailLength={50}
+        inertia={0.5}
+        grainIntensity={0.05}
+        bloomStrength={0.1}
+        bloomRadius={1}
+        bloomThreshold={0.025}
+        fadeDelayMs={1000}
+        fadeDurationMs={1500}
+        zIndex={0}
+      />
 
       <div className="max-w-[1500px] w-full relative z-10">
         
