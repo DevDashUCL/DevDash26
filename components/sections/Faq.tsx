@@ -14,9 +14,9 @@ function Faq() {
     <section id="faq" className="w-full py-16 md:py-20 bg-radial-glow flex items-center justify-center px-4">
       <div className="max-w-3xl w-full">
         <div className="section-header">
-          <p className="section-label">FAQ</p>
+          {/* <p className="section-label">FAQ</p> */}
           <h2 className="section-title">
-            FREQUENTLY ASKED <span className="highlight">QUESTIONS</span>
+            FA<span className="highlight">Q</span>
           </h2>
         </div>
         <div className="faq-list">

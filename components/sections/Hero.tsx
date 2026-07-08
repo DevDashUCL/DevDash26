@@ -50,7 +50,7 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-col items-center justify-center pointer-events-none px-4 max-w-full gap-10">
         <span className="text-[11px] md:text-[13px] font-mono font-bold text-white/50 tracking-[0.2em] uppercase mb-2 select-none pointer-events-none">
-          UCL IT Club Presents
+        Computer Science Community of UCL presents
         </span>
 
         {/* Tagline tag */}
