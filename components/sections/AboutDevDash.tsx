@@ -14,7 +14,7 @@ export default function AboutDevDash() {
         staggerChildren: 0.15,
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -28,7 +28,7 @@ export default function AboutDevDash() {
         duration: 0.5
       }
     }
-  };
+  } as const;
 
   return (
     <section id="about" className="relative w-full py-24 md:py-32 bg-[#0A0A0A] flex items-center justify-center px-6 overflow-hidden min-h-[600px]">

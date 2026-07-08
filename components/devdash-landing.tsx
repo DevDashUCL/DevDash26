@@ -58,7 +58,7 @@ export default function DevDashLanding() {
 
             <Hero />
             <AboutDevDash />
-            {/* <Schedule /> */}
+            <Schedule />
             <Prizes />
             <MeetTheTeam />
             <FAQSection />
