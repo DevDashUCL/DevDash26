@@ -11,6 +11,7 @@ const ElectricBorder = ({
   className = '',
   style = undefined
 }) => {
+
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const animationRef = useRef(null);
