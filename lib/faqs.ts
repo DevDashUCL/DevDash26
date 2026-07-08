@@ -11,12 +11,12 @@ export const FAQS = [
   {
     question: "Who can participate in DevDash'26?",
     answer:
-      "DevDash 26 is open to all currently enrolled undergraduate students at UCL. Students from any year of study or degree programme are welcome to participate, reguardless of their previous hackathon experience.",
+      "DevDash'26 is open to all currently enrolled undergraduate students at UCL. Students from any year of study or degree programme are welcome to participate, reguardless of their previous hackathon experience.",
   },
   {
     question: "How do I register for DevDash'26?",
     answer:
-      `You can register for DevDash 2026 by filling out the registration form available at the registration page. Make sure to provide accurate information and submit the form before the registration deadline.`,
+      `You can register for DevDash'26 by filling out the registration form available at the registration page. Make sure to provide accurate information and submit the form before the registration deadline.`,
   },
   {
     question: "Can I participate as an individual or do I need a team?",
