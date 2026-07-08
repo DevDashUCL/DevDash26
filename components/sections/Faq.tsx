@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FAQS } from "../../lib/faqs";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -11,17 +12,19 @@ function Faq() {
   };
 
   return (
-    <section id="faq" className="w-full py-16 md:py-20 bg-radial-glow flex items-center justify-center px-4">
-      <div className="max-w-3xl w-full">
-        <div className="section-header">
-          <p className="section-label">FAQ</p>
-          <h2 className="section-title">
-            FREQUENTLY ASKED <span className="highlight">QUESTIONS</span>
-          </h2>
-        </div>
+    <section id="faq" className="bg-section-faq">
+      <div className="os-container">
+        <SectionHeading
+          label="FAQ"
+          title={
+            <>
+              FA<span className="highlight">Q</span>
+            </>
+          }
+        />
         <div className="faq-list">
           {FAQS.map((item, i) => (
-            <div key={i} className={`faq-item${openIndex === i ? " open" : ""}`}>
+            <div key={i} className={`faq-item glass${openIndex === i ? " open" : ""}`}>
               <button className="faq-q" onClick={() => toggle(i)}>
                 {item.question}
                 <span className="icon">+</span>
