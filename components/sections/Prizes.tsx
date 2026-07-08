@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Trophy, Lock, Unlock } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ElectricBorder from "@/components/ElectricBorder";
 
 export default function Prizes() {
   const prizePoolRef = useRef<HTMLSpanElement>(null);
@@ -230,57 +229,48 @@ export default function Prizes() {
         </div>
 
         {/* Total Prize Pool Section */}
-        <ElectricBorder
-          color="#00ef4f"
-          speed={0.8}
-          chaos={0.11}
-          thickness={2}
-          borderRadius={16}
-          className="w-full mb-12"
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative border border-[#00ef4f]/25 bg-[#00ef4f]/5 rounded-2xl p-6 md:p-8 backdrop-blur-sm text-center overflow-hidden mb-12 animate-[pool-glow-pulse_6s_ease-in-out_infinite]"
         >
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative border border-[#00ef4f]/15 bg-[#00ef4f]/5 rounded-2xl p-6 md:p-8 backdrop-blur-sm text-center overflow-hidden animate-[pool-glow-pulse_6s_ease-in-out_infinite] w-full h-full"
-          >
-            {/* Tech border brackets */}
-            <div className="absolute top-2 left-2 w-3.5 h-3.5 border-t-2 border-l-2 border-[#00ef4f]" />
-            <div className="absolute top-2 right-2 w-3.5 h-3.5 border-t-2 border-r-2 border-[#00ef4f]" />
-            <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b-2 border-l-2 border-[#00ef4f]" />
-            <div className="absolute bottom-2 right-2 w-3.5 h-3.5 border-b-2 border-r-2 border-[#00ef4f]" />
+          {/* Tech border brackets */}
+          <div className="absolute top-2 left-2 w-3.5 h-3.5 border-t-2 border-l-2 border-[#00ef4f]" />
+          <div className="absolute top-2 right-2 w-3.5 h-3.5 border-t-2 border-r-2 border-[#00ef4f]" />
+          <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b-2 border-l-2 border-[#00ef4f]" />
+          <div className="absolute bottom-2 right-2 w-3.5 h-3.5 border-b-2 border-r-2 border-[#00ef4f]" />
 
-            <span className="text-[#00ef4f] text-xs md:text-sm font-mono tracking-[0.2em] font-bold block uppercase mb-1">
-              TOTAL PRIZE POOL
-            </span>
-            
-            <h3 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-[#00ef4f] tracking-wide my-4 font-mono animate-[text-glow-pulse_4s_ease-in-out_infinite] drop-shadow-[0_0_25px_rgba(0,239,79,0.45)]">
-              LKR <span ref={prizePoolRef}>0</span>+
-            </h3>
+          <span className="text-[#00ef4f] text-xs md:text-sm font-mono tracking-[0.2em] font-bold block uppercase mb-1">
+            TOTAL PRIZE POOL
+          </span>
+          
+          <h3 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-[#00ef4f] tracking-wide my-4 font-mono animate-[text-glow-pulse_4s_ease-in-out_infinite] drop-shadow-[0_0_25px_rgba(0,239,79,0.45)]">
+            LKR <span ref={prizePoolRef}>0</span>+
+          </h3>
 
-            <span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
-              AVAILABLE TO BE CLAIMED
-            </span>
+          <span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
+            AVAILABLE TO BE CLAIMED
+          </span>
 
-            {/* Glowing Animated Progress Bar */}
-            <div className="w-full max-w-xl mx-auto h-7 md:h-9 bg-black/50 border border-[#00ef4f]/30 rounded-full overflow-hidden p-1 my-6 relative shadow-[inner_0_2px_4px_rgba(0,0,0,0.5)]">
-              <div 
-                style={{
-                  width: "95%",
-                  background: 'repeating-linear-gradient(-45deg, #00ef4f, #00ef4f 12px, #002c0f 12px, #002c0f 24px)',
-                  backgroundSize: '34px 34px',
-                }}
-                className="h-full rounded-full animate-stripes shadow-[0_0_15px_rgba(0,239,79,0.7)]"
-              />
-            </div>
+          {/* Glowing Animated Progress Bar */}
+          <div className="w-full max-w-xl mx-auto h-7 md:h-9 bg-black/50 border border-[#00ef4f]/30 rounded-full overflow-hidden p-1 my-6 relative shadow-[inner_0_2px_4px_rgba(0,0,0,0.5)]">
+            <div 
+              style={{
+                width: "95%",
+                background: 'repeating-linear-gradient(-45deg, #00ef4f, #00ef4f 12px, #002c0f 12px, #002c0f 24px)',
+                backgroundSize: '34px 34px',
+              }}
+              className="h-full rounded-full animate-stripes shadow-[0_0_15px_rgba(0,239,79,0.7)]"
+            />
+          </div>
 
-            <div className="flex items-center justify-center gap-2 text-[#00ef4f] text-xs font-mono tracking-wider uppercase">
-              <Unlock className="w-4 h-4" />
-              <span>PRIZE POOL UNLOCKED</span>
-            </div>
-          </motion.div>
-        </ElectricBorder>
+          <div className="flex items-center justify-center gap-2 text-[#00ef4f] text-xs font-mono tracking-wider uppercase">
+            <Unlock className="w-4 h-4" />
+            <span>PRIZE POOL UNLOCKED</span>
+          </div>
+        </motion.div>
 
         {/* Prize Cards Grid */}
         <motion.div 
