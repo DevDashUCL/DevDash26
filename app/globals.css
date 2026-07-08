@@ -10,7 +10,7 @@
   --color-bg-surface: #111111;
   --color-bg-elevated: #1A1A1A;
 
-  --color-accent-green: #16A34A;
+  --color-accent-green: #00ef4f;
   --color-accent-green-glow: #22D66B;
 
   /* Map signal green variables to new accent green colors to keep Navbar style references intact */
@@ -26,6 +26,7 @@
   --font-sans: var(--font-inter), sans-serif;
   --font-display: var(--font-syncopate), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
+  --font-modern-warfare: var(--font-mw), sans-serif;
 }
 
 

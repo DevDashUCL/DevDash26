@@ -50,7 +50,7 @@ export interface LimeButtonProps extends HTMLMotionProps<"button"> {
 
 export const LimeButton = React.forwardRef<HTMLButtonElement, LimeButtonProps>(
     ({ className, size = "md", children, ...props }, ref) => {
-        const baseStyles = "inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0 leading-none font-mono font-bold uppercase tracking-wider rounded-md transition-all duration-300 shadow-[0_0_20px_rgba(132,204,22,0.25)] bg-[#84CC16] hover:bg-[#72B013] text-black focus:outline-none focus:ring-2 focus:ring-[#84CC16] focus:ring-offset-2 focus:ring-offset-background cursor-pointer";
+        const baseStyles = "inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0 leading-none font-mono font-bold uppercase tracking-wider rounded-md transition-all duration-300 shadow-[0_0_20px_rgba(132,204,22,0.25)] bg-[#00ef4f] hover:bg-[#72B013] text-black focus:outline-none focus:ring-2 focus:ring-[#84CC16] focus:ring-offset-2 focus:ring-offset-background cursor-pointer";
 
         const sizes = {
             sm: "h-8 px-3 text-[10px] tracking-wide sm:h-9 sm:px-4 sm:text-xs sm:tracking-wider",

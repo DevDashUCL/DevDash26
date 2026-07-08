@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Syncopate, JetBrains_Mono, Geist } from "next/font/google";
+import localFont from "next/font/local";
 import { MotionConfig } from "framer-motion";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -23,6 +24,11 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "700"],
 });
 
+const modernWarfare = localFont({
+  src: "../fonts/ModernWarfare-8MM6z.ttf",
+  variable: "--font-mw",
+});
+
 export const metadata: Metadata = {
   title: "DevDash '26 | UCL's Inaugural University Hackathon",
   description: "Join UCL ICT Club's first-ever university-wide hackathon. 10 hours. Builders of all levels welcome. Register today.",
@@ -34,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", inter.variable, syncopate.variable, jetbrainsMono.variable, "font-sans", geist.variable)}>
+    <html lang="en" className={cn("h-full", "antialiased", inter.variable, syncopate.variable, jetbrainsMono.variable, modernWarfare.variable, "font-sans", geist.variable)}>
       <body className="min-h-full flex flex-col">
         <MotionConfig reducedMotion="user">
           {children}

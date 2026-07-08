@@ -65,7 +65,7 @@ export default function Hero() {
         {/* Top group */}
         <div className="flex flex-col items-center gap-20 select-none pointer-events-none translate-y-40 md:translate-y-0">
           <span className="text-[11px] md:text-[13px] font-mono font-bold text-white/50 tracking-[0.2em] uppercase text-center">
-            UCL IT Club Presents
+            UCL CSC PRESENTS
           </span>
 
           <div className="text-[12px] xs:text-xs md:text-sm font-mono tracking-[0.15em] md:tracking-[0.25em] text-white/90 flex flex-wrap items-center justify-center gap-1 text-center">
@@ -79,18 +79,18 @@ export default function Hero() {
 
         {/* Bottom group */}
         <div className="text-center flex flex-col items-center gap-3 md:gap-4 select-none pointer-events-none -translate-y-30 md:translate-y-0">
-          <span className="text-xs md:text-sm font-mono tracking-[0.3em] text-gray-400 uppercase">
+          <span className="text-xs md:text-sm tracking-[0.3em] text-gray-400 uppercase font-mono">
             A 8-Hour Hackathon To
           </span>
 
           <TextType
             text={["BUILD THE FUTURE"]}
             as="h2"
-            className="text-xl xs:text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-widest text-accent-green uppercase"
+            className="text-xl xs:text-2xl md:text-4xl font-modern-warfare lg:text-5xl font-extrabold tracking-widest text-accent-green uppercase"
             typingSpeed={200}
             pauseDuration={1000}
             showCursor
-            cursorCharacter="_"
+            cursorCharacter="|"
             deletingSpeed={100}
             cursorBlinkDuration={0.5}
           />
