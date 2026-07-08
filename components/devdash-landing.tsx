@@ -12,7 +12,7 @@ import Prizes from "@/components/sections/Prizes";
 import MeetTheTeam from "@/components/sections/MeetTheTeam";
 import { FAQSection } from "@/components/sections/Faq";
 import Registration from "@/components/sections/Registration";
-import {Footer} from "@/components/layout/Footer";
+import Footer from "@/components/layout/Footer";
 
 export default function DevDashLanding() {
   const [loading, setLoading] = useState(true);

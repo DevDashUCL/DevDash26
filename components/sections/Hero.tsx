@@ -57,7 +57,6 @@ export default function Hero() {
           height={400}
           priority
           className="w-full max-w-[480px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px] h-auto object-contain drop-shadow-[0_0_60px_rgba(132,204,22,0.35)]"
-          style={{ height: "auto" }}
         />
       </div>
 
