@@ -7,7 +7,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import LoadingScreen from "@/components/sections/LoadingScreen";
 import Hero from "@/components/sections/Hero";
 import AboutDevDash from "@/components/sections/AboutDevDash";
-import Schedule from "@/components/sections/Schedule";
+import { Schedule } from "@/components/sections/Schedule";
 import Prizes from "@/components/sections/Prizes";
 import MeetTheTeam from "@/components/sections/MeetTheTeam";
 import { FAQSection } from "@/components/sections/Faq";
@@ -58,7 +58,7 @@ export default function DevDashLanding() {
 
             <Hero />
             <AboutDevDash />
-            <Schedule />
+            {/* <Schedule /> */}
             <Prizes />
             <MeetTheTeam />
             <FAQSection />
