@@ -34,11 +34,6 @@ body {
   background: var(--color-bg-primary);
 }
 
-section {
-  padding: 6rem 2rem;
-  position: relative;
-}
-
 @keyframes blink {
 
   0%,
@@ -100,22 +95,6 @@ section {
   .site-nav a.nav-cta {
     font-size: 11px !important;
     padding: 6px 12px !important;
-  }
-
-  footer .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  footer .footer-left,
-  footer .footer-middle,
-  footer .footer-right {
-    text-align: center;
-  }
-
-  footer .footer-logos {
-    justify-content: center;
   }
 }
 
@@ -197,10 +176,6 @@ section {
   --sidebar-ring: oklch(0.708 0 0);
   --text-muted: rgba(255, 255, 255, 0.5);
   --text-secondary: #9A9A9A;
-  --border-hover: #3F3F46;
-  --glass-bg: rgba(255, 255, 255, 0.04);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-highlight: rgba(255, 255, 255, 0.05);
 }
 
 .dark {
@@ -251,87 +226,6 @@ section {
   html {
     @apply font-sans;
   }
-}
-
-/* ===== FOOTER ===== */
-
-.bg-section-footer {
-  background: linear-gradient(180deg, #0A0A0A 0%, #050505 100%);
-}
-
-.os-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-footer {
-  padding: 3rem 2rem;
-  border-top: 1px solid #27272A;
-  background: #0D0D0D;
-}
-
-footer .footer-content {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-footer .footer-left {
-  text-align: left;
-}
-
-footer .footer-middle {
-  text-align: center;
-}
-
-footer .footer-right {
-  text-align: right;
-}
-
-footer .footer-line {
-  font-family: var(--font-jetbrains-mono), monospace;
-  font-size: 0.7rem;
-  color: #71717A;
-  margin-bottom: 0.3rem;
-  line-height: 1.5;
-}
-
-footer .footer-line.brand {
-  color: #2ECC40;
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-}
-
-footer .footer-logo-club {
-  display: flex;
-  align-items: center;
-}
-
-footer .footer-logo-img {
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-footer .footer-logo-img:hover {
-  opacity: 1;
-}
-
-footer .footer-logos {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-footer .closing {
-  font-family: var(--font-jetbrains-mono), monospace;
-  font-size: 0.65rem;
-  color: #71717A;
-  margin-top: 0.4rem;
 }
 
 /* ===== SECTION HEADER ===== */
@@ -391,50 +285,6 @@ footer .closing {
   margin-top: 1.25rem;
 }
 
-/* ===== GLASS CARD ===== */
-
-.glass {
-  background: transparent;
-  border: 1px solid var(--glass-border);
-  position: relative;
-}
-
-.glass::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--glass-highlight), transparent);
-  border-radius: var(--radius) var(--radius) 0 0;
-}
-
-.glass:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.02);
-}
-
-/* ===== BACKGROUND SECTIONS ===== */
-
-.bg-section-register {
-  background: radial-gradient(ellipse at 50% 0%, rgba(46, 204, 64, 0.08) 0%, transparent 60%);
-}
-
-#register {
-  text-align: center;
-  padding: 6rem 2rem;
-  border-top: 1px solid var(--border);
-}
-
-#register .section-desc {
-  margin: 0 auto 2rem;
-}
-
-.bg-section-faq {
-  background: radial-gradient(ellipse at 50% 0%, rgba(34, 211, 238, 0.05) 0%, transparent 60%);
-}
-
 /* ===== FAQ ===== */
 
 .faq-list {
@@ -444,13 +294,15 @@ footer .closing {
 }
 
 .faq-item {
-  border-radius: var(--radius);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
   overflow: hidden;
   transition: border-color 0.2s ease;
 }
 
 .faq-item.open {
-  border-color: var(--border-hover);
+  border-color: var(--color-accent-green-glow);
 }
 
 .faq-q {
@@ -458,7 +310,6 @@ footer .closing {
   background: none;
   border: none;
   padding: 1rem 1.25rem;
-  font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--color-text-primary);
@@ -472,13 +323,12 @@ footer .closing {
 }
 
 .faq-q:hover {
-  color: var(--accent);
+  color: var(--color-accent-green-glow);
 }
 
 .faq-q .icon {
-  font-family: var(--font-mono);
   font-size: 1rem;
-  color: var(--accent);
+  color: var(--color-accent-green-glow);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
@@ -503,7 +353,7 @@ footer .closing {
 
 .faq-a p {
   padding: 0 1.25rem 1rem;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   line-height: 1.7;
 }
