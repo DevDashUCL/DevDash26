@@ -18,7 +18,7 @@ export default function Hero() {
         <GridScan
           sensitivity={0.6}
           lineThickness={0.5}
-          linesColor="#051e0d"
+          linesColor="#23916d"
           scanColor="#84CC16"
           scanOpacity={0.5}
           gridScale={0.06}
