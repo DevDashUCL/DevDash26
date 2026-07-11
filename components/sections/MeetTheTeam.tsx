@@ -171,12 +171,12 @@ export default function MeetTheTeam() {
         {/* Details layout below avatar */}
         <div className="flex flex-col items-center flex-1 justify-between w-full min-w-0">
           <div className="flex flex-col items-center w-full min-w-0">
-            <span className="text-[#00ef4f] text-[9px] sm:text-[10px] md:text-[11px] font-mono tracking-wider font-semibold uppercase block mb-1">
-              {member.role}
-            </span>
-            <h4 className="text-sm sm:text-base md:text-lg font-extrabold text-white tracking-wide uppercase font-sans line-clamp-2 max-w-full group-hover:text-[#00ef4f]/90 transition-colors">
+            <h4 className="text-sm sm:text-base md:text-lg font-extrabold text-white tracking-wide uppercase font-sans line-clamp-2 max-w-full group-hover:text-[#00ef4f]/90 transition-colors mb-1">
               {member.name}
             </h4>
+            <span className="text-[#00ef4f] group-hover:text-white text-[9px] sm:text-[10px] md:text-[11px] font-mono tracking-wider font-semibold uppercase block transition-colors duration-300">
+              {member.role}
+            </span>
           </div>
 
           {/* Contact Links & Phone Numbers */}
