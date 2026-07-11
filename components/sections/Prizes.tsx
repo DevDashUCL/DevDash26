@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Trophy, Lock, Unlock } from "lucide-react";
 import { gsap } from "gsap";
@@ -8,41 +8,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ElectricBorder from "@/components/ElectricBorder";
 
 export default function Prizes() {
-  const prizePoolRef = useRef<HTMLSpanElement>(null);
-  const prize1Ref = useRef<HTMLSpanElement>(null);
-  const prize2Ref = useRef<HTMLSpanElement>(null);
-  const prize3Ref = useRef<HTMLSpanElement>(null);
-
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     gsap.registerPlugin(ScrollTrigger);
-
-    const animateNumber = (ref: React.RefObject<HTMLSpanElement | null>, value: number) => {
-      if (!ref.current) return;
-      
-      const obj = { val: 0 };
-      gsap.to(obj, {
-        val: value,
-        duration: 2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ref.current,
-          start: "top 85%",
-          toggleActions: "play none none none",
-        },
-        onUpdate: () => {
-          if (ref.current) {
-            ref.current.textContent = Math.round(obj.val).toLocaleString("en-US");
-          }
-        }
-      });
-    };
-
-    animateNumber(prizePoolRef, 500000);
-    animateNumber(prize1Ref, 250000);
-    animateNumber(prize2Ref, 150000);
-    animateNumber(prize3Ref, 100000);
   }, []);
 
   const containerVariants = {
@@ -140,24 +108,24 @@ export default function Prizes() {
       `}} />
 
       <div className="max-w-6xl w-full relative z-10">
-        
+
         {/* Header Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             className="flex flex-col gap-4 text-left"
           >
-            <motion.span 
+            <motion.span
               variants={itemVariants}
               className="text-[#00ef4f] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block"
             >
               // REWARDS
             </motion.span>
-            
-            <motion.h2 
+
+            <motion.h2
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase"
             >
@@ -166,7 +134,7 @@ export default function Prizes() {
               <span className="text-[#00ef4f] animate-[text-glow-pulse_3.5s_ease-in-out_infinite] inline-block">WIN.</span>
             </motion.h2>
 
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-gray-400 text-sm md:text-base leading-relaxed font-sans max-w-lg mt-2"
             >
@@ -238,7 +206,7 @@ export default function Prizes() {
           borderRadius={16}
           className="w-full mb-12"
         >
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.97 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -251,21 +219,21 @@ export default function Prizes() {
             <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b-2 border-l-2 border-[#00ef4f]" />
             <div className="absolute bottom-2 right-2 w-3.5 h-3.5 border-b-2 border-r-2 border-[#00ef4f]" />
 
-            <span className="text-[#00ef4f] text-xs md:text-sm font-mono tracking-[0.2em] font-bold block uppercase mb-1">
+            {/*<span className="text-[#00ef4f] text-xs md:text-sm font-mono tracking-[0.2em] font-bold block uppercase mb-1">
               TOTAL PRIZE POOL
-            </span>
-            
-            <h3 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-[#00ef4f] tracking-wide my-4 font-mono animate-[text-glow-pulse_4s_ease-in-out_infinite] drop-shadow-[0_0_25px_rgba(0,239,79,0.45)]">
-              LKR <span ref={prizePoolRef}>0</span>+
+            </span>*/}
+
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-wide my-4 font-sans leading-relaxed">
+              An exciting cash prize awaits the <span className="text-[#00ef4f]">1st place</span> winner!
             </h3>
 
-            <span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
-              AVAILABLE TO BE CLAIMED
-            </span>
+            {/*<span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
+              2ND & 3RD PLACE RECEIVE CERTIFICATES
+            </span>*/}
 
             {/* Glowing Animated Progress Bar */}
-            <div className="w-full max-w-xl mx-auto h-7 md:h-9 bg-black/50 border border-[#00ef4f]/30 rounded-full overflow-hidden p-1 my-6 relative shadow-[inner_0_2px_4px_rgba(0,0,0,0.5)]">
-              <div 
+            {/*<div className="w-full max-w-xl mx-auto h-7 md:h-9 bg-black/50 border border-[#00ef4f]/30 rounded-full overflow-hidden p-1 my-6 relative shadow-[inner_0_2px_4px_rgba(0,0,0,0.5)]">
+              <div
                 style={{
                   width: "95%",
                   background: 'repeating-linear-gradient(-45deg, #00ef4f, #00ef4f 12px, #002c0f 12px, #002c0f 24px)',
@@ -273,17 +241,17 @@ export default function Prizes() {
                 }}
                 className="h-full rounded-full animate-stripes shadow-[0_0_15px_rgba(0,239,79,0.7)]"
               />
-            </div>
+            </div>*/}
 
-            <div className="flex items-center justify-center gap-2 text-[#00ef4f] text-xs font-mono tracking-wider uppercase">
+            {/*<div className="flex items-center justify-center gap-2 text-[#00ef4f] text-xs font-mono tracking-wider uppercase">
               <Unlock className="w-4 h-4" />
               <span>PRIZE POOL UNLOCKED</span>
-            </div>
+            </div>*/}
           </motion.div>
         </ElectricBorder>
 
         {/* Prize Cards Grid */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -291,7 +259,7 @@ export default function Prizes() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full"
         >
           {/* Card 1: Champion */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="relative flex flex-col items-center justify-between border border-[#00ef4f] bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm animate-[card-glow-pulse_4s_ease-in-out_infinite] text-center h-[380px]"
           >
@@ -303,7 +271,7 @@ export default function Prizes() {
 
             <div className="flex flex-col items-center w-full">
               {/* Hexagon Trophy Wrapper */}
-              <div 
+              <div
                 style={{
                   clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
                 }}
@@ -327,7 +295,7 @@ export default function Prizes() {
               </div>
 
               <h5 className="text-2xl sm:text-3xl font-extrabold text-[#00ef4f] font-mono tracking-wide mt-3">
-                LKR <span ref={prize1Ref}>0</span>
+                TBD
               </h5>
             </div>
 
@@ -340,7 +308,7 @@ export default function Prizes() {
           </motion.div>
 
           {/* Card 2: Runner Up */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="relative flex flex-col items-center justify-between border border-white/10 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[380px] hover:border-[#00ef4f]/30 hover:shadow-[0_0_25px_rgba(0,239,79,0.03)] transition-all duration-300"
           >
@@ -352,7 +320,7 @@ export default function Prizes() {
 
             <div className="flex flex-col items-center w-full">
               {/* Hexagon Trophy Wrapper */}
-              <div 
+              <div
                 style={{
                   clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
                 }}
@@ -376,7 +344,7 @@ export default function Prizes() {
               </div>
 
               <h5 className="text-2xl sm:text-3xl font-extrabold text-[#00ef4f] font-mono tracking-wide mt-3">
-                LKR <span ref={prize2Ref}>0</span>
+                CERTIFICATE
               </h5>
             </div>
 
@@ -389,7 +357,7 @@ export default function Prizes() {
           </motion.div>
 
           {/* Card 3: Second Runner Up */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="relative flex flex-col items-center justify-between border border-white/10 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[380px] hover:border-[#00ef4f]/30 hover:shadow-[0_0_25px_rgba(0,239,79,0.03)] transition-all duration-300"
           >
@@ -401,7 +369,7 @@ export default function Prizes() {
 
             <div className="flex flex-col items-center w-full">
               {/* Hexagon Trophy Wrapper */}
-              <div 
+              <div
                 style={{
                   clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
                 }}
@@ -425,7 +393,7 @@ export default function Prizes() {
               </div>
 
               <h5 className="text-2xl sm:text-3xl font-extrabold text-[#00ef4f] font-mono tracking-wide mt-3">
-                LKR <span ref={prize3Ref}>0</span>
+                CERTIFICATE
               </h5>
             </div>
 

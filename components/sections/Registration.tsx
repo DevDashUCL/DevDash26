@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { REGISTER_URL } from "@/lib/constants";
-import "@/components/ui/Registration.css";
+import "./Registration.css";
 
 export default function Registration() {
   const containerVariants = {

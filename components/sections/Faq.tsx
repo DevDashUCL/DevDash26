@@ -16,7 +16,7 @@ function Faq() {
         <div className="section-header">
           <p className="section-label">FAQ</p>
           <h2 className="section-title">
-            FREQUENTLY ASKED <span className="highlight">QUESTIONS</span>
+            FA<span className="highlight">Q</span>s
           </h2>
         </div>
         <div className="faq-list">
