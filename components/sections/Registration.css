@@ -38,9 +38,10 @@
 }
 
 .registration-cta:hover {
-  background: #72B013;
-  transform: translateY(-1px);
-  box-shadow: 0 0 30px rgba(0, 239, 79, 0.4);
+  background: #000;
+  color: #00ef4f;
+  border: 1px solid #00ef4f;
+  box-shadow: 0 0 20px rgba(0, 239, 79, 0.3);
 }
 
 .registration-cta:active {

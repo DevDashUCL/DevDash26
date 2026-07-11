@@ -12,9 +12,12 @@ export function Schedule() {
           <h4 className="text-xl md:text-2xl font-bold text-white mb-3 font-sans tracking-wide">
             Introduction to Hackathon
           </h4>
-          <div className="flex items-center gap-2 text-sm text-neutral-400 font-sans">
-            <span className="text-neutral-500 font-mono">Conducted by:</span>
-            <span className="text-white font-semibold">Mr. Rukshan Senanayake</span>
+          <div className="flex items-center gap-4 mt-4">
+            <img src="/team/mr.rukshan.jpg" alt="Mr. Rukshan Senanayake" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
+              <span className="text-neutral-500 font-mono">Conducted by:</span>
+              <span className="text-white font-semibold">Mr. Rukshan Senanayake</span>
+            </div>
           </div>
         </div>
       ),
@@ -27,9 +30,12 @@ export function Schedule() {
           <h4 className="text-xl md:text-2xl font-bold text-white mb-3 font-sans tracking-wide">
             GitHub & Version Control
           </h4>
-          <div className="flex items-center gap-2 text-sm text-neutral-400 font-sans">
-            <span className="text-neutral-500 font-mono">Conducted by:</span>
-            <span className="text-white font-semibold">Mirco Fernando</span>
+          <div className="flex items-center gap-4 mt-4">
+            <img src="/team/mirco.jpg" alt="Mirco Fernando" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
+              <span className="text-neutral-500 font-mono">Conducted by:</span>
+              <span className="text-white font-semibold">Mirco Fernando</span>
+            </div>
           </div>
         </div>
       ),
@@ -42,9 +48,12 @@ export function Schedule() {
           <h4 className="text-xl md:text-2xl font-bold text-white mb-3 font-sans tracking-wide">
             AI-Powered Development: Modern AI Tools
           </h4>
-          <div className="flex items-center gap-2 text-sm text-neutral-400 font-sans">
-            <span className="text-neutral-500 font-mono">Conducted by:</span>
-            <span className="text-white font-semibold">Dinod Manjith</span>
+          <div className="flex items-center gap-4 mt-4">
+            <img src="/team/dinod.jpg" alt="Mr. Dinod Manjith" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
+              <span className="text-neutral-500 font-mono">Conducted by:</span>
+              <span className="text-white font-semibold">Mr. Dinod Manjith</span>
+            </div>
           </div>
         </div>
       ),

@@ -94,7 +94,7 @@ export function Navbar() {
                     <div className="flex flex-row items-center gap-1">
                         <Link href="/" className="flex items-center gap-1 group z-50 relative">
                             <Image
-                                src="/devdash.png"
+                                src="/dd.jpeg"
                                 alt="DevDash Logo"
                                 width={150}
                                 height={46}
