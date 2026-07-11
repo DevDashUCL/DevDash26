@@ -1,0 +1,27 @@
+.footer-section {
+  @apply relative w-full py-8 px-6 sm:py-10 sm:px-12;
+}
+
+.footer-inner {
+  @apply mx-auto flex flex-col items-center justify-between gap-6 sm:flex-row;
+}
+
+.footer-logo-left {
+  @apply flex items-center justify-center sm:justify-start;
+}
+
+.footer-logo-left img {
+  @apply h-10 w-auto object-contain;
+}
+
+.footer-center {
+  @apply text-center text-xs font-medium tracking-wide text-[#9A9A9A] sm:text-sm;
+}
+
+.footer-logos-right {
+  @apply flex items-center justify-center gap-3 sm:justify-end;
+}
+
+.footer-logos-right img {
+  @apply h-8 w-auto object-contain sm:h-10;
+}
