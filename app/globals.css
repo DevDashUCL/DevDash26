@@ -67,10 +67,6 @@ body {
   border-color: rgba(0, 204, 68, 0.4) !important;
 }
 
-.footer-link:hover {
-  color: #00cc44 !important;
-}
-
 @media (max-width: 768px) {
   .site-nav {
     padding: 12px 16px !important;

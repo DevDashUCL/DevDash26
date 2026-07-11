@@ -2,11 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import "../ui/Footer.css";
+import "../sections/Footer.css";
 
 export default function Footer() {
   return (
-    <footer className="footer-section border-t border-[#2A2A2A] bg-[#0A0A0A]">
+    <footer className="footer-section border-t border-[#2A2A2A] bg-[#0A0A0A] relative z-10">
       <div className="footer-inner max-w-7xl">
         <div className="footer-logo-left">
           <Image
