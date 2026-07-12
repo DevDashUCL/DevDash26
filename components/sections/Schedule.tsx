@@ -31,7 +31,7 @@ export function Schedule() {
             GitHub & Version Control
           </h4>
           <div className="flex items-center gap-4 mt-4">
-            <img src="/team/mirco.jpg" alt="Mirco Fernando" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <img src="/team/MircoFernando.jpeg" alt="Mirco Fernando" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
             <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
               <span className="text-neutral-500 font-mono">Conducted by:</span>
               <span className="text-white font-semibold">Mirco Fernando</span>
@@ -49,7 +49,7 @@ export function Schedule() {
             AI-Powered Development: Modern AI Tools
           </h4>
           <div className="flex items-center gap-4 mt-4">
-            <img src="/team/dinod.jpg" alt="Mr. Dinod Manjith" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <img src="/team/Mr.Dinod.jpeg" alt="Mr. Dinod Manjith" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
             <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
               <span className="text-neutral-500 font-mono">Conducted by:</span>
               <span className="text-white font-semibold">Mr. Dinod Manjith</span>

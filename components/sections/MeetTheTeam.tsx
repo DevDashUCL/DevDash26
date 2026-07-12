@@ -52,8 +52,8 @@ export default function MeetTheTeam() {
     role: "Event Lead / Marketing Communicator",
     email: "shehanikav@gmail.com",
     phone: "0742885971",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
+    linkedin: "https://www.linkedin.com/in/shehanikaveenya",
+    github: "https://github.com/shehanikav",
   };
 
   const coordinators: TeamMember[] = [
@@ -62,20 +62,20 @@ export default function MeetTheTeam() {
       role: "Program Coordinator / Secretary",
       email: "hannanmahdi009@gmail.com",
       phone: "0773927351",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/mahdihannan/",
+      github: "https://github.com/codeMahdi009",
     },
     {
       name: "Vinuki Gunesekara",
       role: "Judging & Evaluation / Budget Manager",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/vinuki-gunasekera-144945304/",
+      github: "https://github.com/vinukigunasekera",
     },
     {
       name: "Vinuli Ranasinghe",
       role: "Logistics & Communication Lead",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/vinuli-ranasinghe/",
+      github: "https://github.com/VinuliR",
     },
   ];
 
@@ -83,20 +83,20 @@ export default function MeetTheTeam() {
     {
       name: "Mirco Fernando",
       role: "Technical Coordinator",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/mircofernando/",
+      github: "https://github.com/MircoFernando",
     },
     {
       name: "Moksha Sandavirage",
       role: "Technical Coordinator",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/moksha-san/",
+      github: "https://github.com/MokshaSan",
     },
     {
       name: "Ovin Perera",
       role: "Design Coordinator",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/ovin-indula-perera/",
+      github: "https://github.com/OvinIndula",
     },
     {
       name: "Eeshal Ali",
@@ -152,7 +152,7 @@ export default function MeetTheTeam() {
         <div className="w-full h-[220px] sm:h-[250px] md:h-[280px] bg-black/40 border border-white/10 group-hover:border-[#00ef4f]/30 rounded-xl shrink-0 overflow-hidden relative flex items-center justify-center transition-colors mb-4">
           {/* Radar/pulse glow background */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,239,79,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity animate-pulse" />
-          
+
           {/* Animated matrix scanline */}
           <div className="absolute inset-x-0 h-[1px] bg-[#00ef4f]/40 top-0 group-hover:animate-[scanline_2s_linear_infinite] opacity-0 group-hover:opacity-100 pointer-events-none" />
 
@@ -199,7 +199,7 @@ export default function MeetTheTeam() {
                 </a>
               )}
             </div>
-            
+
             {/* Compact phone number displays for Lead / Marketing & Coord */}
             {member.phone && (
               <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] md:text-[11px] font-mono text-white/30 group-hover:text-[#00ef4f]/40 transition-colors mt-0.5">
@@ -256,24 +256,24 @@ export default function MeetTheTeam() {
       />
 
       <div className="max-w-[1500px] w-full relative z-10">
-        
+
         {/* Header Section */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             className="flex flex-col items-center gap-4"
           >
-            <motion.span 
+            <motion.span
               variants={itemVariants}
               className="text-[#00ef4f] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block"
             >
               // TEAM
             </motion.span>
-            
-            <motion.h2 
+
+            <motion.h2
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase text-center"
             >
@@ -281,7 +281,7 @@ export default function MeetTheTeam() {
               <span className="text-[#00ef4f] animate-cursor-blink font-mono">|</span>
             </motion.h2>
 
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-gray-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mt-2 text-center"
             >
@@ -289,8 +289,8 @@ export default function MeetTheTeam() {
             </motion.p>
 
             {/* Custom tag */}
-            <motion.div 
-              variants={itemVariants} 
+            <motion.div
+              variants={itemVariants}
               className="border border-[#00ef4f]/30 bg-[#00ef4f]/5 rounded px-3 py-1.5 text-[#00ef4f] font-mono text-[10px] md:text-xs uppercase tracking-widest inline-block w-fit mt-1 text-center"
             >
               &gt; COLLABORATE. ORGANIZE. EXECUTE.
@@ -330,7 +330,7 @@ export default function MeetTheTeam() {
           </div>
 
           {/* Bottom slogan */}
-          <motion.span 
+          <motion.span
             variants={itemVariants}
             className="text-center font-mono text-[10px] md:text-xs text-[#00ef4f]/60 uppercase tracking-[0.25em] mt-12 block"
           >
