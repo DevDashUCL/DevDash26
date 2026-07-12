@@ -14,6 +14,8 @@ const navLinks = [
     { name: "Schedule", href: "#schedule" },
     { name: "Prizes", href: "#prizes" },
     { name: "Team", href: "#team" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Register", href: "#register" },
 ];
 
 export function Navbar() {
