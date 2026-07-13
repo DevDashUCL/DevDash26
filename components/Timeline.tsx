@@ -6,6 +6,7 @@ import {
     motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import ScrollFloat from "@/components/ScrollFloat";
 
 interface TimelineEntry {
     title: string;
@@ -42,9 +43,18 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <span className="text-[#00ef4f] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block">
                     // EVENT TIMELINE
                 </span>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase mt-2">
+                <div className="w-full relative z-10 flex justify-start lg:justify-start md:justify-start mt-2">
+                  <ScrollFloat
+                    animationDuration={1}
+                    ease="back.inOut(2)"
+                    scrollStart="center bottom+=50%"
+                    scrollEnd="bottom bottom-=40%"
+                    stagger={0.03}
+                    containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase text-left"
+                  >
                     THE MISSION BEGINS HERE.
-                </h2>
+                  </ScrollFloat>
+                </div>
             </div>
 
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

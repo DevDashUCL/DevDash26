@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import ElectricBorder from "@/components/ElectricBorder";
 import GhostCursor from "@/components/GhostCursor";
+import ScrollFloat from "@/components/ScrollFloat";
 
 const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -273,13 +274,19 @@ export default function MeetTheTeam() {
               // TEAM
             </motion.span>
 
-            <motion.h2
-              variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase text-center"
-            >
-              MEET THE <span className="text-[#00ef4f]">TEAM</span>
-              <span className="text-[#00ef4f] animate-cursor-blink font-mono">|</span>
-            </motion.h2>
+            <div className="w-full relative z-10 flex justify-center">
+              <ScrollFloat
+                animationDuration={1}
+                ease="back.inOut(2)"
+                scrollStart="center bottom+=50%"
+                scrollEnd="bottom bottom-=40%"
+                stagger={0.03}
+                containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase text-center"
+              >
+                MEET THE <span className="text-[#00ef4f]">TEAM</span>
+                <span className="text-[#00ef4f] animate-cursor-blink font-mono">|</span>
+              </ScrollFloat>
+            </div>
 
             <motion.p
               variants={itemVariants}

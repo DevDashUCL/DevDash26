@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Rocket, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import ScrollFloat from "@/components/ScrollFloat";
 
 export default function AboutDevDash() {
   const containerVariants = {
@@ -71,15 +72,21 @@ export default function AboutDevDash() {
           </motion.span>
 
           {/* Heading */}
-          <motion.h2
-            variants={itemVariants}
-            className="text-1xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase"
-          >
-            DON&apos;T <br />
-            JUST CODE. <br />
-            <span className="text-[#00ef4f] text-1xl sm:text-4xl md:text-5xl lg:text-6xl">CREATE</span> <br />
-            <span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">WHAT&apos;S NEXT.</span>
-          </motion.h2>
+          <div className="w-full relative z-10 flex justify-center text-left md:text-center md:justify-center">
+            <ScrollFloat
+              animationDuration={1}
+              ease="back.inOut(2)"
+              scrollStart="center bottom+=50%"
+              scrollEnd="bottom bottom-=40%"
+              stagger={0.03}
+              containerClassName="text-1xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase"
+            >
+              DON&apos;T <br />
+              JUST CODE. <br />
+              <span className="text-[#00ef4f] text-1xl sm:text-4xl md:text-5xl lg:text-6xl">CREATE</span> <br />
+              <span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">WHAT&apos;S NEXT.</span>
+            </ScrollFloat>
+          </div>
 
           {/* Divider Line: Horizontal Two Green Structure */}
           <motion.div variants={itemVariants} className="flex items-center w-full gap-3 my-2">

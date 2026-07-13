@@ -6,6 +6,7 @@ import { Trophy, Lock, Unlock } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ElectricBorder from "@/components/ElectricBorder";
+import ScrollFloat from "@/components/ScrollFloat";
 
 export default function Prizes() {
   useEffect(() => {
@@ -125,14 +126,20 @@ export default function Prizes() {
               // REWARDS
             </motion.span>
 
-            <motion.h2
-              variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase"
-            >
-              BUILD. <br />
-              COMPETE. <br />
-              <span className="text-[#00ef4f] animate-[text-glow-pulse_3.5s_ease-in-out_infinite] inline-block">WIN.</span>
-            </motion.h2>
+            <div className="w-full relative z-10 flex justify-start lg:justify-start md:justify-start">
+              <ScrollFloat
+                animationDuration={1}
+                ease="back.inOut(2)"
+                scrollStart="center bottom+=50%"
+                scrollEnd="bottom bottom-=40%"
+                stagger={0.03}
+                containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase text-left"
+              >
+                BUILD. <br />
+                COMPETE. <br />
+                <span className="text-[#00ef4f] animate-[text-glow-pulse_3.5s_ease-in-out_infinite] inline-block">WIN.</span>
+              </ScrollFloat>
+            </div>
 
             <motion.p
               variants={itemVariants}
@@ -224,7 +231,7 @@ export default function Prizes() {
             </span>*/}
 
             <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-wide my-4 font-sans leading-relaxed">
-              An exciting cash prize awaits the <span className="text-[#00ef4f]">1st place</span> winner!
+              <span className="text-[#00ef4f] text-2xl sm:text-3xl md:text-4xl">CASH PRIZES AWAIT</span> the 1st place winner!
             </h3>
 
             {/*<span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
@@ -251,13 +258,13 @@ export default function Prizes() {
         </ElectricBorder>
 
         {/* Prize Cards Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full"
-        >
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl mx-auto"
+          >
           {/* Card 1: Champion */}
           <motion.div
             variants={itemVariants}
@@ -294,8 +301,8 @@ export default function Prizes() {
                 <div className="h-[1px] bg-[#00ef4f]/40 w-8" />
               </div>
 
-              <h5 className="text-2xl sm:text-3xl font-extrabold text-[#00ef4f] font-mono tracking-wide mt-3">
-                TBD
+              <h5 className="text-xl sm:text-2xl font-extrabold text-[#00ef4f] font-mono tracking-wide mt-3">
+                CASH PRIZE
               </h5>
             </div>
 
@@ -307,16 +314,16 @@ export default function Prizes() {
             </div>
           </motion.div>
 
-          {/* Card 2: Runner Up */}
+          {/* Card 2: All Other Participants */}
           <motion.div
             variants={itemVariants}
-            className="relative flex flex-col items-center justify-between border border-white/10 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[380px] hover:border-[#00ef4f]/30 hover:shadow-[0_0_25px_rgba(0,239,79,0.03)] transition-all duration-300"
+            className="relative flex flex-col items-center justify-between border border-white/20 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[380px] hover:border-[#00ef4f]/50 hover:shadow-[0_0_30px_rgba(0,239,79,0.1)] transition-all duration-300"
           >
             {/* Tech Corners */}
-            <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/20" />
-            <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/20" />
-            <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-white/20" />
-            <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-white/20" />
+            <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/40" />
+            <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/40" />
+            <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-white/40" />
+            <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-white/40" />
 
             <div className="flex flex-col items-center w-full">
               {/* Hexagon Trophy Wrapper */}
@@ -324,83 +331,34 @@ export default function Prizes() {
                 style={{
                   clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
                 }}
-                className="w-16 h-18 bg-white/5 border border-white/15 flex items-center justify-center mb-5"
+                className="w-16 h-18 bg-white/10 border border-white/30 flex items-center justify-center mb-5"
               >
-                <Trophy className="text-[#cbd5e1] w-8 h-8 drop-shadow-[0_0_8px_rgba(203,213,225,0.4)]" />
+                <Trophy className="text-[#cbd5e1] w-8 h-8 drop-shadow-[0_0_12px_rgba(203,213,225,0.6)]" />
               </div>
 
               <h4 className="text-xl font-bold text-white tracking-wide uppercase font-sans mb-0.5">
-                RUNNER UP
+                ALL PARTICIPANTS
               </h4>
-              <span className="text-white/40 text-[10px] font-mono tracking-widest font-bold uppercase block mb-3">
-                SECOND PLACE
+              <span className="text-white/60 text-[10px] font-mono tracking-widest font-bold uppercase block mb-3">
+                EVERYONE ELSE
               </span>
 
               {/* Separator line */}
-              <div className="flex items-center justify-center w-full gap-2 my-1 opacity-30">
-                <div className="h-[1px] bg-white/40 w-8" />
+              <div className="flex items-center justify-center w-full gap-2 my-1 opacity-50">
+                <div className="h-[1px] bg-white/60 w-8" />
                 <div className="w-1.5 h-1.5 rotate-45 border border-white bg-black" />
-                <div className="h-[1px] bg-white/40 w-8" />
+                <div className="h-[1px] bg-white/60 w-8" />
               </div>
 
-              <h5 className="text-2xl sm:text-3xl font-extrabold text-[#00ef4f] font-mono tracking-wide mt-3">
+              <h5 className="text-xl sm:text-2xl font-extrabold text-white font-mono tracking-wide mt-3">
                 CERTIFICATE
               </h5>
             </div>
 
             <div className="w-full flex justify-center">
-              <div className="w-full max-w-[200px] border border-white/10 text-white/40 bg-transparent rounded-lg py-2 px-4 flex items-center justify-center gap-2 text-[10px] font-mono tracking-widest uppercase">
-                <span>REWARD</span>
-                <Lock className="w-3.5 h-3.5" />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Card 3: Second Runner Up */}
-          <motion.div
-            variants={itemVariants}
-            className="relative flex flex-col items-center justify-between border border-white/10 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[380px] hover:border-[#00ef4f]/30 hover:shadow-[0_0_25px_rgba(0,239,79,0.03)] transition-all duration-300"
-          >
-            {/* Tech Corners */}
-            <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/20" />
-            <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/20" />
-            <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-white/20" />
-            <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-white/20" />
-
-            <div className="flex flex-col items-center w-full">
-              {/* Hexagon Trophy Wrapper */}
-              <div
-                style={{
-                  clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-                }}
-                className="w-16 h-18 bg-white/5 border border-white/15 flex items-center justify-center mb-5"
-              >
-                <Trophy className="text-[#f97316] w-8 h-8 drop-shadow-[0_0_8px_rgba(249,115,22,0.4)]" />
-              </div>
-
-              <h4 className="text-xl font-bold text-white tracking-wide uppercase font-sans mb-0.5">
-                SECOND RUNNER UP
-              </h4>
-              <span className="text-white/40 text-[10px] font-mono tracking-widest font-bold uppercase block mb-3">
-                THIRD PLACE
-              </span>
-
-              {/* Separator line */}
-              <div className="flex items-center justify-center w-full gap-2 my-1 opacity-30">
-                <div className="h-[1px] bg-white/40 w-8" />
-                <div className="w-1.5 h-1.5 rotate-45 border border-white bg-black" />
-                <div className="h-[1px] bg-white/40 w-8" />
-              </div>
-
-              <h5 className="text-2xl sm:text-3xl font-extrabold text-[#00ef4f] font-mono tracking-wide mt-3">
-                CERTIFICATE
-              </h5>
-            </div>
-
-            <div className="w-full flex justify-center">
-              <div className="w-full max-w-[200px] border border-white/10 text-white/40 bg-transparent rounded-lg py-2 px-4 flex items-center justify-center gap-2 text-[10px] font-mono tracking-widest uppercase">
-                <span>REWARD</span>
-                <Lock className="w-3.5 h-3.5" />
+              <div className="w-full max-w-[200px] border border-[#00ef4f]/50 text-[#00ef4f]/80 bg-[#00ef4f]/5 rounded-lg py-2 px-4 flex items-center justify-center gap-2 text-[10px] font-mono tracking-widest uppercase shadow-[0_0_10px_rgba(0,239,79,0.05)]">
+                <span>REWARD UNLOCKED</span>
+                <Unlock className="w-3.5 h-3.5" />
               </div>
             </div>
           </motion.div>
