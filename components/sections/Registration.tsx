@@ -77,12 +77,6 @@ export default function Registration() {
               // REGISTER
             </motion.span>
 
-<<<<<<< HEAD
-        <motion.p variants={itemVariants} className="registration-body">
-          Join dozens of developers, designers and innovators for 10 hours of
-          collaboration, learning and creation.
-        </motion.p>
-=======
             <div className="w-full relative z-10 flex justify-center">
               <ScrollFloat
                 animationDuration={1}
@@ -96,7 +90,6 @@ export default function Registration() {
                 <span className="text-[var(--color-accent-green)] animate-cursor-blink font-mono">|</span>
               </ScrollFloat>
             </div>
->>>>>>> 0e4df7c (feat: section refinements)
 
             <motion.p
               variants={itemVariants}
