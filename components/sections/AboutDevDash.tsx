@@ -95,10 +95,10 @@ export default function AboutDevDash() {
               stagger={0.03}
               containerClassName="text-1xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase"
             >
-              DON&apos;T <br />
-              JUST CODE. <br />
+              DON<span className="font-sans">'</span>T <br />
+              JUST CODE <br />
               <span className="text-[#00ef4f] text-1xl sm:text-4xl md:text-5xl lg:text-6xl">CREATE</span> <br />
-              <span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">WHAT&apos;S NEXT.</span>
+              <span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">WHAT<span className="font-sans">'</span>S NEXT.</span>
             </ScrollFloat>
           </div>
 >>>>>>> 0e4df7c (feat: section refinements)
