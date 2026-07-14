@@ -6,7 +6,7 @@ export const FAQS = [
   {
     question: "What is DevDash'26?",
     answer:
-      "DevDash'26 is a university hackathon organized by the Universal College Lanka. It is a platform for students to showcase their coding skills, collaborate with peers, and develop innovative solutions to real-world problems.",
+      "DevDash'26 is a intra university hackathon organized by the Universal College Lanka. It is a platform for students to showcase their coding skills, collaborate with peers, and develop innovative solutions to real-world problems.",
   },
   {
     question: "Who can participate in DevDash'26?",
@@ -21,7 +21,7 @@ export const FAQS = [
   {
     question: "Can I participate as an individual or do I need a team?",
     answer:
-      "DevDash'26 is a team based hackathon. Each team must have minimum of 2 members and maximum of 5 members. All participents must register as a team before the registration deadline",
+      "DevDash'26 is a team based hackathon. Each team must have minimum of 3 members and maximum of 5 members. All participents must register as a team before the registration deadline",
   },
   {
     question: "What should I bring to the hackathon?",

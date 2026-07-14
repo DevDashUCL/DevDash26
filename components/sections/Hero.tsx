@@ -80,7 +80,7 @@ export default function Hero() {
         {/* Bottom group */}
         <div className="text-center flex flex-col items-center gap-3 md:gap-4 select-none pointer-events-none -translate-y-30 md:translate-y-0">
           <span className="text-xs md:text-sm tracking-[0.3em] text-gray-400 uppercase font-mono">
-            A 8-Hour Hackathon To
+            A 6-Hour Hackathon To
           </span>
 
           <TextType

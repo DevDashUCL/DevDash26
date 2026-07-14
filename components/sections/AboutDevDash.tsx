@@ -78,7 +78,10 @@ export default function AboutDevDash() {
             DON&apos;T <br />
             JUST CODE. <br />
             <span className="text-[#00ef4f] text-1xl sm:text-4xl md:text-5xl lg:text-6xl">CREATE</span> <br />
-            <span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">WHAT&apos;S NEXT.</span>
+            {/*<span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">WHATS NEXT</span>*/}
+            <span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
+              {"WHAT'S NEXT"}
+            </span>
           </motion.h2>
 
           {/* Divider Line: Horizontal Two Green Structure */}

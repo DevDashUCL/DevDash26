@@ -49,7 +49,7 @@ interface TeamMember {
 export default function MeetTheTeam() {
   const eventLead: TeamMember = {
     name: "Shehani Mukadange",
-    role: "Event Lead / Marketing Communicator",
+    role: "Event Lead",
     email: "shehanikav@gmail.com",
     phone: "0742885971",
     linkedin: "https://www.linkedin.com/in/shehanikaveenya",
@@ -59,7 +59,7 @@ export default function MeetTheTeam() {
   const coordinators: TeamMember[] = [
     {
       name: "Mahdi Hannan",
-      role: "Program Coordinator / Secretary",
+      role: "Program Coordinator",
       email: "hannanmahdi009@gmail.com",
       phone: "0773927351",
       linkedin: "https://www.linkedin.com/in/mahdihannan/",
@@ -67,13 +67,13 @@ export default function MeetTheTeam() {
     },
     {
       name: "Vinuki Gunesekara",
-      role: "Judging & Evaluation / Budget Manager",
+      role: "Judging & Evaluation Coordinator",
       linkedin: "https://www.linkedin.com/in/vinuki-gunasekera-144945304/",
       github: "https://github.com/vinukigunasekera",
     },
     {
       name: "Vinuli Ranasinghe",
-      role: "Logistics & Communication Lead",
+      role: "Logistics & Communication Coordinator",
       linkedin: "https://www.linkedin.com/in/vinuli-ranasinghe/",
       github: "https://github.com/VinuliR",
     },

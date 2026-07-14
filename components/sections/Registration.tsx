@@ -55,7 +55,7 @@ export default function Registration() {
         </motion.div>
 
         <motion.p variants={itemVariants} className="registration-body">
-          Join hundreds of developers, designers and innovators for 24 hours of
+          Join dozens of developers, designers and innovators for 10 hours of
           collaboration, learning and creation.
         </motion.p>
 
