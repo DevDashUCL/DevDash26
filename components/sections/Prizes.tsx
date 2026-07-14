@@ -123,7 +123,7 @@ export default function Prizes() {
               variants={itemVariants}
               className="text-[#00ef4f] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block"
             >
-              // REWARDS
+              {"// REWARDS"}
             </motion.span>
 
             <div className="w-full relative z-10 flex justify-start lg:justify-start md:justify-start">

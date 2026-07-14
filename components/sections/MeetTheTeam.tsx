@@ -271,7 +271,7 @@ export default function MeetTheTeam() {
               variants={itemVariants}
               className="text-[#00ef4f] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block"
             >
-              // TEAM
+              {"// TEAM"}
             </motion.span>
 
             <div className="w-full relative z-10 flex justify-center">

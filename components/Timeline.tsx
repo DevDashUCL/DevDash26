@@ -41,7 +41,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             {/* Redesigned header matching proposal and site theme */}
             <div className="max-w-7xl mx-auto pt-24 pb-12 px-4 md:px-8 lg:px-10 flex flex-col gap-2">
                 <span className="text-[#00ef4f] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block">
-                    // EVENT TIMELINE
+                    {"// EVENT TIMELINE"}
                 </span>
                 <div className="w-full relative z-10 flex justify-start lg:justify-start md:justify-start mt-2">
                   <ScrollFloat

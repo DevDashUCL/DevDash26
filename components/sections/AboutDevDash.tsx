@@ -68,7 +68,7 @@ export default function AboutDevDash() {
             variants={itemVariants}
             className="text-[#00ef4f] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block"
           >
-            // ABOUT DEVDASH
+            {"// ABOUT DEVDASH"}
           </motion.span>
 
           {/* Heading */}
@@ -82,10 +82,10 @@ export default function AboutDevDash() {
               stagger={0.03}
               containerClassName="text-1xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase"
             >
-              DON<span className="font-sans">'</span>T <br />
+              DON<span className="font-sans">&apos;</span>T <br />
               JUST CODE <br />
               <span className="text-[#00ef4f] text-1xl sm:text-4xl md:text-5xl lg:text-6xl">CREATE</span> <br />
-              <span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">WHAT<span className="font-sans">'</span>S NEXT.</span>
+              <span className="text-[#00ef4f] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">WHAT<span className="font-sans">&apos;</span>S NEXT.</span>
             </ScrollFloat>
           </div>
 
@@ -101,7 +101,7 @@ export default function AboutDevDash() {
             variants={itemVariants}
             className="text-gray-400 text-sm md:text-base leading-relaxed font-sans max-w-xl"
           >
-            DevDash is UCL's inaugural hackathon where innovation meets collaboration. Designed for students of all skill levels, the event empowers participants to think creatively, solve real-world challenges, and showcase their potencial trough technology.
+            DevDash is UCL&apos;s inaugural hackathon where innovation meets collaboration. Designed for students of all skill levels, the event empowers participants to think creatively, solve real-world challenges, and showcase their potential through technology.
           </motion.p>
 
           {/* Features Inline Box */}

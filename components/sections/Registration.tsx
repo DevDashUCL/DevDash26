@@ -74,7 +74,7 @@ export default function Registration() {
               variants={itemVariants}
               className="text-[var(--color-accent-green)] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block uppercase"
             >
-              // REGISTER
+              {"// REGISTER"}
             </motion.span>
 
             <div className="w-full relative z-10 flex justify-center">

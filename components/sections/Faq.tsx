@@ -39,7 +39,7 @@ function Faq() {
               }}
               className="text-[var(--color-accent-green)] font-mono text-xs md:text-sm tracking-[0.2em] font-semibold block uppercase"
             >
-              // FAQ
+              {"// FAQ"}
             </motion.span>
 
             <div className="w-full relative z-10 flex justify-center">
@@ -63,7 +63,7 @@ function Faq() {
               }}
               className="text-gray-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mt-2 text-center"
             >
-              Everything you need to know about DevDash'26. Can't find the answer you're looking for? Reach out to our team.
+              Everything you need to know about DevDash&apos;26. Can&apos;t find the answer you&apos;re looking for? Reach out to our team.
             </motion.p>
           </motion.div>
         </div>
