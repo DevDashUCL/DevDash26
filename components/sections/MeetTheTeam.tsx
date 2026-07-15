@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import ElectricBorder from "@/components/ElectricBorder";
@@ -49,6 +49,15 @@ interface TeamMember {
 }
 
 export default function MeetTheTeam() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   const eventLead: TeamMember = {
     name: "Shehani Kaveenya",
     role: "Event Lead",
@@ -261,20 +270,22 @@ export default function MeetTheTeam() {
         }
       `}} />
 
-      <GhostCursor
-        color="#00ef4f"
-        brightness={2}
-        edgeIntensity={0}
-        trailLength={50}
-        inertia={0.5}
-        grainIntensity={0.05}
-        bloomStrength={0.1}
-        bloomRadius={1}
-        bloomThreshold={0.025}
-        fadeDelayMs={1000}
+      {!isMobile && (
+        <GhostCursor
+          color="#00ef4f"
+          brightness={2}
+          edgeIntensity={0}
+          trailLength={50}
+          inertia={0.5}
+          grainIntensity={0.05}
+          bloomStrength={0.1}
+          bloomRadius={1}
+          bloomThreshold={0.025}
+          fadeDelayMs={1000}
         fadeDurationMs={1500}
         zIndex={0}
       />
+      )}
 
       <div className="max-w-[1500px] w-full relative z-10">
 

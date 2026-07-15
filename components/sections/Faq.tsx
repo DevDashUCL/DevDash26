@@ -51,7 +51,7 @@ function Faq() {
                 stagger={0.03}
                 containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase text-center"
               >
-                GOT <span className="text-[var(--color-accent-green)]">QUESTIONS?</span>
+                FA<span className="text-[var(--color-accent-green)]">Q</span>s
                 <span className="text-[var(--color-accent-green)] animate-cursor-blink font-mono">|</span>
               </ScrollFloat>
             </div>
@@ -103,7 +103,7 @@ function Faq() {
                     <Plus size={18} strokeWidth={isOpen ? 3 : 2} />
                   </motion.div>
                 </button>
-                
+
                 <AnimatePresence>
                   {isOpen && (
                     <motion.div

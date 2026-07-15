@@ -64,12 +64,12 @@ export default function Hero() {
       {/* Foreground content - top and bottom aligned around the centered image */}
       <div className="relative z-20 flex flex-col justify-between flex-1 pointer-events-none px-4 py-6 md:py-10 min-h-screen">
         {/* Top group */}
-        <div className="flex flex-col items-center gap-20 select-none pointer-events-none translate-y-40 md:translate-y-0">
+        <div className="flex flex-col items-center gap-10 md:gap-20 select-none pointer-events-none translate-y-40 md:translate-y-0">
           <span className="text-[11px] md:text-[13px] font-mono font-bold text-white/50 tracking-[0.2em] uppercase text-center">
             UCL CSC PRESENTS
           </span>
 
-          <div className="text-[12px] xs:text-xs md:text-sm font-mono tracking-[0.15em] md:tracking-[0.25em] text-white/90 flex flex-wrap items-center justify-center gap-1 text-center">
+          <div className="text-[12px] sm:text-xs md:text-sm font-mono tracking-[0.15em] md:tracking-[0.25em] text-white/90 flex flex-wrap items-center justify-center gap-1 text-center">
             <span className="text-[#84CC16] font-bold">[</span>
             <span className="text-[#84CC16]">CODE.</span>
             <span>COLLABORATE.</span>
@@ -87,7 +87,7 @@ export default function Hero() {
           <TextType
             text={["BUILD THE FUTURE"]}
             as="h2"
-            className="text-xl xs:text-2xl md:text-4xl font-modern-warfare lg:text-5xl font-extrabold tracking-widest text-accent-green uppercase"
+            className="text-xl sm:text-2xl md:text-4xl font-modern-warfare lg:text-5xl font-extrabold tracking-widest text-accent-green uppercase"
             typingSpeed={200}
             pauseDuration={1000}
             showCursor

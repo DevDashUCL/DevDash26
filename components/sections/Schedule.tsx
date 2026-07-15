@@ -13,7 +13,7 @@ export function Schedule() {
             Introduction to Hackathon
           </h4>
           <div className="flex items-center gap-4 mt-4">
-            <img src="/team/mr.rukshan.jpg" alt="Mr. Rukshan Senanayake" className="w-25 h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <img src="/team/mr.rukshan.jpg" alt="Mr. Rukshan Senanayake" className="w-16 h-16 sm:w-20 sm:h-20 md:w-25 md:h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
             <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
               <span className="text-neutral-500 font-mono">Conducted by:</span>
               <a href="https://www.linkedin.com/in/rukshanjs/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white font-semibold hover:text-[#00ef4f] transition-colors">
@@ -34,7 +34,7 @@ export function Schedule() {
             GitHub & Version Control
           </h4>
           <div className="flex items-center gap-4 mt-4">
-            <img src="/team/MircoFernando.jpeg" alt="Mirco Fernando" className="w-25 h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <img src="/team/MircoFernando.jpeg" alt="Mirco Fernando" className="w-16 h-16 sm:w-20 sm:h-20 md:w-25 md:h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
             <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
               <span className="text-neutral-500 font-mono">Conducted by:</span>
               <a href="https://www.linkedin.com/in/mircofernando" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white font-semibold hover:text-[#00ef4f] transition-colors">
@@ -55,7 +55,7 @@ export function Schedule() {
             AI-Powered Development: Modern AI Tools
           </h4>
           <div className="flex items-center gap-4 mt-4">
-            <img src="/team/Mr.Dinod.jpeg" alt="Mr. Dinod Manjith" className="w-25 h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <img src="/team/Mr.Dinod.jpeg" alt="Mr. Dinod Manjith" className="w-16 h-16 sm:w-20 sm:h-20 md:w-25 md:h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
             <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
               <span className="text-neutral-500 font-mono">Conducted by:</span>
               <a href="https://www.linkedin.com/in/dinod-imanjith-withanawasam-06014034a/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white font-semibold hover:text-[#00ef4f] transition-colors">

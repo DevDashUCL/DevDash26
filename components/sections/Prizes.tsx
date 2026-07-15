@@ -42,6 +42,13 @@ export default function Prizes() {
     <section id="prizes" className="relative w-full py-24 bg-[#0A0A0A] overflow-hidden flex flex-col items-center px-6 border-t border-white/5">
       <style dangerouslySetInnerHTML={{
         __html: `
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
         @keyframes ripple {
           0%, 100% {
             transform: scaleY(0.4);
@@ -158,7 +165,7 @@ export default function Prizes() {
           </motion.div>
 
           {/* Right side energy bolt graphic */}
-          <div className="relative w-full h-64 flex items-center justify-center overflow-hidden border border-white/5 bg-[#111111]/10 rounded-2xl">
+          <div className="relative w-full h-48 sm:h-56 md:h-64 flex items-center justify-center overflow-hidden border border-white/5 bg-[#111111]/10 rounded-2xl">
             {/* Audio equalizer wave lines */}
             <div className="absolute inset-0 flex items-center justify-center gap-1.5 opacity-20 px-8">
               {Array.from({ length: 45 }).map((_, i) => {
@@ -180,12 +187,10 @@ export default function Prizes() {
             {/* Lightning bolt vector overlay */}
             <div className="relative z-10 flex items-center justify-center">
               <svg
-                width="220"
-                height="220"
                 viewBox="0 0 100 100"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="animate-[lightning-pulse_3s_ease-in-out_infinite]"
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 animate-[lightning-pulse_3s_ease-in-out_infinite]"
               >
                 <path
                   d="M58 5 L22 52 H44 L32 95 L78 40 H52 L68 5 Z"
@@ -196,10 +201,10 @@ export default function Prizes() {
             </div>
 
             {/* Cyberpunk HUD overlays */}
-            <div className="absolute top-3 right-4 text-[9px] font-mono text-[#00ef4f]/60 uppercase tracking-widest flex items-center gap-1.5">
+            <div className="absolute top-3 right-4 text-[8px] sm:text-[9px] font-mono text-[#00ef4f]/60 uppercase tracking-widest flex items-center gap-1.5">
               DATA STREAM <span className="w-1.5 h-1.5 bg-[#00ef4f] rounded-full animate-ping" />
             </div>
-            <div className="absolute bottom-3 left-4 text-[8px] font-mono text-white/20 uppercase tracking-wider">
+            <div className="absolute bottom-3 left-4 text-[7px] sm:text-[8px] font-mono text-white/20 uppercase tracking-wider">
               REWARDS MATRIX V1.0.26
             </div>
           </div>
@@ -270,7 +275,7 @@ export default function Prizes() {
           {/* Card 1: Champion */}
           <motion.div
             variants={itemVariants}
-            className="relative flex flex-col items-center justify-between border border-[#00ef4f] bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm animate-[card-glow-pulse_4s_ease-in-out_infinite] text-center h-[420px]"
+            className="relative flex flex-col items-center justify-between border border-[#00ef4f] bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm animate-[card-glow-pulse_4s_ease-in-out_infinite] text-center h-[340px] sm:h-[380px] md:h-[420px]"
           >
             <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-[#00ef4f]" />
             <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-[#00ef4f]" />
@@ -280,7 +285,7 @@ export default function Prizes() {
             <div className="flex flex-col items-center w-full">
               <div
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-                className="w-20 h-22 bg-[#00ef4f]/10 border border-[#00ef4f]/30 flex items-center justify-center mb-5"
+                className="w-16 h-18 sm:w-18 sm:h-20 md:w-20 md:h-22 bg-[#00ef4f]/10 border border-[#00ef4f]/30 flex items-center justify-center mb-5"
               >
                 <Trophy className="text-[#facc15] w-10 h-10 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]" />
               </div>
@@ -312,7 +317,7 @@ export default function Prizes() {
           {/* Card 2: Second Place */}
           <motion.div
             variants={itemVariants}
-            className="relative flex flex-col items-center justify-between border border-white/20 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[420px] hover:border-[#00ef4f]/50 hover:shadow-[0_0_30px_rgba(0,239,79,0.1)] transition-all duration-300"
+            className="relative flex flex-col items-center justify-between border border-white/20 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[340px] sm:h-[380px] md:h-[420px] hover:border-[#00ef4f]/50 hover:shadow-[0_0_30px_rgba(0,239,79,0.1)] transition-all duration-300"
           >
             <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/40" />
             <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/40" />
@@ -322,7 +327,7 @@ export default function Prizes() {
             <div className="flex flex-col items-center w-full">
               <div
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-                className="w-20 h-22 bg-[#00ef4f]/10 border border-[#00ef4f]/30 flex items-center justify-center mb-5"
+                className="w-16 h-18 sm:w-18 sm:h-20 md:w-20 md:h-22 bg-[#00ef4f]/10 border border-[#00ef4f]/30 flex items-center justify-center mb-5"
               >
                 <Trophy className="text-[#00ef4f] w-10 h-10 drop-shadow-[0_0_8px_rgba(0,239,79,0.6)]" />
               </div>
@@ -353,7 +358,7 @@ export default function Prizes() {
           {/* Card 3: Third Place */}
           <motion.div
             variants={itemVariants}
-            className="relative flex flex-col items-center justify-between border border-white/20 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[420px] hover:border-[#00ef4f]/50 hover:shadow-[0_0_30px_rgba(0,239,79,0.1)] transition-all duration-300"
+            className="relative flex flex-col items-center justify-between border border-white/20 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[340px] sm:h-[380px] md:h-[420px] hover:border-[#00ef4f]/50 hover:shadow-[0_0_30px_rgba(0,239,79,0.1)] transition-all duration-300"
           >
             <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/40" />
             <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/40" />
@@ -363,7 +368,7 @@ export default function Prizes() {
             <div className="flex flex-col items-center w-full">
               <div
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-                className="w-20 h-22 bg-white/10 border border-white/30 flex items-center justify-center mb-5"
+                className="w-16 h-18 sm:w-18 sm:h-20 md:w-20 md:h-22 bg-white/10 border border-white/30 flex items-center justify-center mb-5"
               >
                 <Trophy className="text-[#cbd5e1] w-10 h-10 drop-shadow-[0_0_12px_rgba(203,213,225,0.6)]" />
               </div>
@@ -394,7 +399,7 @@ export default function Prizes() {
           {/* Card 4: All Other Participants */}
           <motion.div
             variants={itemVariants}
-            className="relative flex flex-col items-center justify-between border border-white/10 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[420px] hover:border-[#00ef4f]/50 hover:shadow-[0_0_30px_rgba(0,239,79,0.1)] transition-all duration-300"
+            className="relative flex flex-col items-center justify-between border border-white/10 bg-[#0A0A0A] rounded-2xl p-8 backdrop-blur-sm text-center h-[340px] sm:h-[380px] md:h-[420px] hover:border-[#00ef4f]/50 hover:shadow-[0_0_30px_rgba(0,239,79,0.1)] transition-all duration-300"
           >
             <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/20" />
             <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/20" />
@@ -404,7 +409,7 @@ export default function Prizes() {
             <div className="flex flex-col items-center w-full">
               <div
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-                className="w-20 h-22 bg-white/5 border border-white/20 flex items-center justify-center mb-5"
+                className="w-16 h-18 sm:w-18 sm:h-20 md:w-20 md:h-22 bg-white/5 border border-white/20 flex items-center justify-center mb-5"
               >
                 <Trophy className="text-white/40 w-10 h-10" />
               </div>
