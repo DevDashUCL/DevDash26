@@ -13,7 +13,7 @@ interface TimelineEntry {
     content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({ data, description }: { data: TimelineEntry[], description?: React.ReactNode }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
@@ -44,17 +44,22 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     {"// EVENT TIMELINE"}
                 </span>
                 <div className="w-full relative z-10 flex justify-start lg:justify-start md:justify-start mt-2">
-                  <ScrollFloat
-                    animationDuration={1}
-                    ease="back.inOut(2)"
-                    scrollStart="center bottom+=50%"
-                    scrollEnd="bottom bottom-=40%"
-                    stagger={0.03}
-                    containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase text-left"
-                  >
-                    THE MISSION BEGINS HERE.
-                  </ScrollFloat>
+                    <ScrollFloat
+                        animationDuration={1}
+                        ease="back.inOut(2)"
+                        scrollStart="center bottom+=50%"
+                        scrollEnd="bottom bottom-=40%"
+                        stagger={0.03}
+                        containerClassName="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] font-modern-warfare uppercase text-left"
+                    >
+                        THE MISSION <br /><span className="text-[#00ef4f]">BEGINS HERE.</span>
+                    </ScrollFloat>
                 </div>
+                {description && (
+                    <p className="text-gray-400 text-sm md:text-base max-w-2xl mt-4 text-left font-sans leading-relaxed">
+                        {description}
+                    </p>
+                )}
             </div>
 
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
@@ -80,7 +85,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         </div>
                     </div>
                 ))}
-                
+
                 {/* Background Connecting Rail Line */}
                 <div
                     style={{
@@ -94,7 +99,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             height: heightTransform,
                             opacity: opacityTransform,
                         }}
-                        className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-b from-[#00ef4f] via-[#00ef4f] to-transparent from-[0%] via-[80%] rounded-full"
+                        className="absolute inset-x-0 top-0 w-[2px] bg-linear-to-b from-[#00ef4f] via-[#00ef4f] to-transparent from-[0%] via-[80%] rounded-full"
                     />
                 </div>
             </div>

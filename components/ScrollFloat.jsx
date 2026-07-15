@@ -30,10 +30,16 @@ const ScrollFloat = ({
         ));
       }
       if (Array.isArray(node)) {
-        return node.map(processNode);
+        return node.map((child, index) => {
+          const processedChild = processNode(child);
+          if (React.isValidElement(processedChild)) {
+            return React.cloneElement(processedChild, { key: processedChild.key || `arr-child-${globalIndex++}-${index}` });
+          }
+          return processedChild;
+        });
       }
       if (React.isValidElement(node)) {
-        return React.cloneElement(node, {}, processNode(node.props.children));
+        return React.cloneElement(node, { key: node.key || `el-${globalIndex++}` }, processNode(node.props.children));
       }
       return node;
     };

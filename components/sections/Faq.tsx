@@ -113,7 +113,7 @@ function Faq() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <div className="px-6 pb-6 pt-0 md:px-8 md:pb-8">
-                        <div className="w-full h-px bg-gradient-to-r from-[var(--color-accent-green)]/0 via-[var(--color-accent-green)]/20 to-[var(--color-accent-green)]/0 mb-5" />
+                        <div className="w-full h-px bg-linear-to-r from-[var(--color-accent-green)]/0 via-[var(--color-accent-green)]/20 to-[var(--color-accent-green)]/0 mb-5" />
                         <p className="text-[var(--color-text-secondary)] leading-relaxed text-sm md:text-base">
                           {item.answer}
                         </p>

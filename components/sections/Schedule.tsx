@@ -13,10 +13,13 @@ export function Schedule() {
             Introduction to Hackathon
           </h4>
           <div className="flex items-center gap-4 mt-4">
-            <img src="/team/mr.rukshan.jpg" alt="Mr. Rukshan Senanayake" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <img src="/team/mr.rukshan.jpg" alt="Mr. Rukshan Senanayake" className="w-25 h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
             <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
               <span className="text-neutral-500 font-mono">Conducted by:</span>
-              <span className="text-white font-semibold">Mr. Rukshan Senanayake</span>
+              <a href="https://www.linkedin.com/in/rukshanjs/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white font-semibold hover:text-[#00ef4f] transition-colors">
+                <span>Mr. Rukshan Senanayake</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -31,10 +34,13 @@ export function Schedule() {
             GitHub & Version Control
           </h4>
           <div className="flex items-center gap-4 mt-4">
-            <img src="/team/MircoFernando.jpeg" alt="Mirco Fernando" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <img src="/team/MircoFernando.jpeg" alt="Mirco Fernando" className="w-25 h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
             <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
               <span className="text-neutral-500 font-mono">Conducted by:</span>
-              <span className="text-white font-semibold">Mirco Fernando</span>
+              <a href="https://www.linkedin.com/in/mircofernando" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white font-semibold hover:text-[#00ef4f] transition-colors">
+                <span>Mr. Mirco Fernando</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -49,10 +55,13 @@ export function Schedule() {
             AI-Powered Development: Modern AI Tools
           </h4>
           <div className="flex items-center gap-4 mt-4">
-            <img src="/team/Mr.Dinod.jpeg" alt="Mr. Dinod Manjith" className="w-20 h-20 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
+            <img src="/team/Mr.Dinod.jpeg" alt="Mr. Dinod Manjith" className="w-25 h-25 rounded-full object-cover border-2 border-[#00ef4f]/30 bg-neutral-800" />
             <div className="flex flex-col gap-1 text-sm text-neutral-400 font-sans">
               <span className="text-neutral-500 font-mono">Conducted by:</span>
-              <span className="text-white font-semibold">Mr. Dinod Manjith</span>
+              <a href="https://www.linkedin.com/in/dinod-imanjith-withanawasam-06014034a/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white font-semibold hover:text-[#00ef4f] transition-colors">
+                <span>Mr. Dinod Imanjith</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -94,7 +103,10 @@ export function Schedule() {
 
       {/* Main Content */}
       <div className="relative z-10">
-        <Timeline data={data} />
+        <Timeline
+          data={data}
+          description="Prepare for DevDash with a series of interactive workshops designed to strengthen your technical skills, introduce emerging technologies, and provide practical guidance on building successful hackathon projects."
+        />
       </div>
     </section>
   );

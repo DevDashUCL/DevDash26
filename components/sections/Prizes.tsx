@@ -40,7 +40,8 @@ export default function Prizes() {
 
   return (
     <section id="prizes" className="relative w-full py-24 bg-[#0A0A0A] overflow-hidden flex flex-col items-center px-6 border-t border-white/5">
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes ripple {
           0%, 100% {
             transform: scaleY(0.4);
@@ -231,7 +232,7 @@ export default function Prizes() {
             </span>*/}
 
             <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-wide my-4 font-sans leading-relaxed">
-              <span className="text-[#00ef4f] text-2xl sm:text-3xl md:text-4xl">CASH PRIZES AWAIT</span> the 1st place winner!
+              <span className="text-[#00ef4f] text-2xl sm:text-3xl md:text-4xl">CASH PRIZES AWAITS</span><br /> the 1st place winner!
             </h3>
 
             {/*<span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
@@ -258,13 +259,13 @@ export default function Prizes() {
         </ElectricBorder>
 
         {/* Prize Cards Grid */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl mx-auto"
-          >
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl mx-auto"
+        >
           {/* Card 1: Champion */}
           <motion.div
             variants={itemVariants}
