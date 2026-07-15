@@ -50,13 +50,13 @@ interface TeamMember {
 
 export default function MeetTheTeam() {
   const eventLead: TeamMember = {
-    name: "Shehani Mukadange",
+    name: "Shehani Kaveenya",
     role: "Event Lead",
     email: "shehanikav@gmail.com",
     phone: "0742885971",
     linkedin: "https://www.linkedin.com/in/shehanikaveenya",
     github: "https://github.com/shehanikav",
-    image: "/team/IMG_4485.jpg",
+    image: "/team/Shehani Kaveenya.jpeg",
   };
 
   const coordinators: TeamMember[] = [
@@ -67,7 +67,7 @@ export default function MeetTheTeam() {
       phone: "0773927351",
       linkedin: "https://www.linkedin.com/in/mahdihannan/",
       github: "https://github.com/codeMahdi009",
-      image: "/team/IMG_4441.jpg",
+      image: "/team/Mahdi Hannan.jpeg",
 
     },
     {
@@ -75,14 +75,14 @@ export default function MeetTheTeam() {
       role: "Judging & Evaluation Coordinator",
       linkedin: "https://www.linkedin.com/in/vinuki-gunasekera-144945304/",
       github: "https://github.com/vinukigunasekera",
-      image: "/team/IMG_4465.jpg",
+      image: "/team/Vinuki Gunesekara.jpeg",
     },
     {
       name: "Vinuli Ranasinghe",
       role: "Logistics & Communication Coordinator",
       linkedin: "https://www.linkedin.com/in/vinuli-ranasinghe/",
       github: "https://github.com/VinuliR",
-      image: "/team/IMG_4462.jpg",
+      image: "/team/Vinuli Ranasinghe.jpeg",
     },
   ];
 
@@ -92,28 +92,28 @@ export default function MeetTheTeam() {
       role: "Technical Coordinator",
       linkedin: "https://www.linkedin.com/in/mircofernando/",
       github: "https://github.com/MircoFernando",
-      image: "/team/IMG_4456.jpg",
+      image: "/team/Mirco Fernando.jpeg",
     },
     {
       name: "Moksha Sandavirage",
       role: "Technical Coordinator",
       linkedin: "https://www.linkedin.com/in/moksha-san/",
       github: "https://github.com/MokshaSan",
-      image: "/team/IMG_4445.jpg",
+      image: "/team/Moksha Sandavirage.jpeg",
     },
     {
       name: "Ovin Perera",
       role: "Design Coordinator",
       linkedin: "https://www.linkedin.com/in/ovin-indula-perera/",
       github: "https://github.com/OvinIndula",
-      image: "/team/IMG_4488-1.jpg",
+      image: "/team/Ovin Perera.jpeg",
     },
     {
       name: "Eeshal Ali",
       role: "Design Coordinator",
       linkedin: "https://linkedin.com",
       github: "https://github.com",
-      image: "/team/IMG_4471.jpg",
+      image: "/team/Eeshal Ali.jpeg",
     },
   ];
 
