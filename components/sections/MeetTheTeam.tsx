@@ -41,6 +41,7 @@ const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
 interface TeamMember {
   name: string;
   role: string;
+  image?: string;
   email?: string;
   phone?: string;
   linkedin?: string;
@@ -55,6 +56,7 @@ export default function MeetTheTeam() {
     phone: "0742885971",
     linkedin: "https://www.linkedin.com/in/shehanikaveenya",
     github: "https://github.com/shehanikav",
+    image: "/team/IMG_4485.jpg",
   };
 
   const coordinators: TeamMember[] = [
@@ -65,18 +67,22 @@ export default function MeetTheTeam() {
       phone: "0773927351",
       linkedin: "https://www.linkedin.com/in/mahdihannan/",
       github: "https://github.com/codeMahdi009",
+      image: "/team/IMG_4441.jpg",
+
     },
     {
       name: "Vinuki Gunesekara",
       role: "Judging & Evaluation Coordinator",
       linkedin: "https://www.linkedin.com/in/vinuki-gunasekera-144945304/",
       github: "https://github.com/vinukigunasekera",
+      image: "/team/IMG_4465.jpg",
     },
     {
       name: "Vinuli Ranasinghe",
       role: "Logistics & Communication Coordinator",
       linkedin: "https://www.linkedin.com/in/vinuli-ranasinghe/",
       github: "https://github.com/VinuliR",
+      image: "/team/IMG_4462.jpg",
     },
   ];
 
@@ -86,24 +92,28 @@ export default function MeetTheTeam() {
       role: "Technical Coordinator",
       linkedin: "https://www.linkedin.com/in/mircofernando/",
       github: "https://github.com/MircoFernando",
+      image: "/team/IMG_4456.jpg",
     },
     {
       name: "Moksha Sandavirage",
       role: "Technical Coordinator",
       linkedin: "https://www.linkedin.com/in/moksha-san/",
       github: "https://github.com/MokshaSan",
+      image: "/team/IMG_4445.jpg",
     },
     {
       name: "Ovin Perera",
       role: "Design Coordinator",
       linkedin: "https://www.linkedin.com/in/ovin-indula-perera/",
       github: "https://github.com/OvinIndula",
+      image: "/team/IMG_4488-1.jpg",
     },
     {
       name: "Eeshal Ali",
       role: "Design Coordinator",
       linkedin: "https://linkedin.com",
       github: "https://github.com",
+      image: "/team/IMG_4471.jpg",
     },
   ];
 
@@ -151,22 +161,32 @@ export default function MeetTheTeam() {
 
         {/* Cyberpunk headshot / avatar placeholder (Larger portrait size) */}
         <div className="w-full h-[220px] sm:h-[250px] md:h-[280px] bg-black/40 border border-white/10 group-hover:border-[#00ef4f]/30 rounded-xl shrink-0 overflow-hidden relative flex items-center justify-center transition-colors mb-4">
-          {/* Radar/pulse glow background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,239,79,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity animate-pulse" />
+          {member.image ? (
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <>
+              {/* Radar/pulse glow background */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,239,79,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity animate-pulse" />
 
-          {/* Animated matrix scanline */}
-          <div className="absolute inset-x-0 h-[1px] bg-[#00ef4f]/40 top-0 group-hover:animate-[scanline_2s_linear_infinite] opacity-0 group-hover:opacity-100 pointer-events-none" />
+              {/* Animated matrix scanline */}
+              <div className="absolute inset-x-0 h-[1px] bg-[#00ef4f]/40 top-0 group-hover:animate-[scanline_2s_linear_infinite] opacity-0 group-hover:opacity-100 pointer-events-none" />
 
-          {/* Futuristic profile outline */}
-          <svg className="w-16 h-16 sm:w-20 sm:h-20 text-white/10 group-hover:text-[#00ef4f]/30 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-          </svg>
+              {/* Futuristic profile outline */}
+              <svg className="w-16 h-16 sm:w-20 sm:h-20 text-white/10 group-hover:text-[#00ef4f]/30 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
 
-          {/* Small tech target crosshairs */}
-          <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-white/30 group-hover:border-[#00ef4f]/40" />
-          <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-white/30 group-hover:border-[#00ef4f]/40" />
-          <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-white/30 group-hover:border-[#00ef4f]/40" />
-          <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-white/30 group-hover:border-[#00ef4f]/40" />
+              {/* Small tech target crosshairs */}
+              <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-white/30 group-hover:border-[#00ef4f]/40" />
+              <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-white/30 group-hover:border-[#00ef4f]/40" />
+              <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-white/30 group-hover:border-[#00ef4f]/40" />
+              <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-white/30 group-hover:border-[#00ef4f]/40" />
+            </>
+          )}
         </div>
 
         {/* Details layout below avatar */}
