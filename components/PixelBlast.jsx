@@ -329,6 +329,15 @@ const PixelBlast = ({
   const visibilityRef = useRef({ visible: true });
   const speedRef = useRef(speed);
 
+  useEffect(() => {
+    if (!containerRef.current || !autoPauseOffscreen) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      visibilityRef.current.visible = entry.isIntersecting;
+    }, { threshold: 0 });
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [autoPauseOffscreen]);
+
   const threeRef = useRef(null);
   const prevConfigRef = useRef(null);
   useEffect(() => {

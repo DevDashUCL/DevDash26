@@ -508,7 +508,10 @@ export const GridScan = ({
     window.addEventListener('resize', onResize);
 
     let last = performance.now();
+    let isVisible = true;
+
     const tick = () => {
+      if (!isVisible) return;
       const now = performance.now();
       const dt = Math.max(0, Math.min(0.1, (now - last) / 1000));
       last = now;
@@ -553,9 +556,26 @@ export const GridScan = ({
       }
       rafRef.current = requestAnimationFrame(tick);
     };
+
+    const observer = new IntersectionObserver(([entry]) => {
+      const wasVisible = isVisible;
+      isVisible = entry.isIntersecting;
+      
+      if (isVisible && !wasVisible) {
+        last = performance.now();
+        rafRef.current = requestAnimationFrame(tick);
+      } else if (!isVisible && rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
+    }, { threshold: 0 });
+    
+    observer.observe(container);
+
     rafRef.current = requestAnimationFrame(tick);
 
     return () => {
+      observer.disconnect();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       window.removeEventListener('resize', onResize);
       material.dispose();

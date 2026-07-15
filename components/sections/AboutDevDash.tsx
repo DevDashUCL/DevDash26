@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Rocket, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import ScrollFloat from "@/components/ScrollFloat";
-// import Lightning from "@/components/Lightning";
 
 export default function AboutDevDash() {
   const containerVariants = {
@@ -46,19 +45,6 @@ export default function AboutDevDash() {
         />
         {/* Mobile Base Overlay - Semi-transparent so image is visible behind text */}
         <div className="absolute inset-0 bg-[#0A0A0A]/20 md:hidden pointer-events-none"></div>
-
-        {/* Lightning Effect */}
-        {/* <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40 mix-blend-screen overflow-hidden">
-          <div style={{ width: '100%', height: '100%', minHeight: '800px', position: 'relative' }}>
-            <Lightning
-              hue={120}
-              xOffset={0}
-              speed={1}
-              intensity={1}
-              size={1}
-            />
-          </div>
-        </div> */}
 
         {/* Desktop Gradients */}
         <div className="hidden md:block absolute inset-y-0 left-0 w-[80%] bg-linear-to-r from-[#0A0A0A] via-[#0A0A0A]/85 to-transparent"></div>
