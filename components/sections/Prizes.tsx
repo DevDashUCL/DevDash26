@@ -301,7 +301,7 @@ export default function Prizes() {
 
               <ul className="mt-4 space-y-2 text-sm font-mono text-[#00ef4f]/80 tracking-wide">
                 <li>Cash Prize</li>
-                <li>Physical Certificate</li>
+                <li>Gold Medal</li>
                 <li>E-Certificate</li>
               </ul>
             </div>
@@ -342,7 +342,7 @@ export default function Prizes() {
               </div>
 
               <ul className="mt-4 space-y-2 text-sm font-mono text-white/60 tracking-wide">
-                <li>Physical Certificate</li>
+                <li>Silver Medal</li>
                 <li>E-Certificate</li>
               </ul>
             </div>
@@ -383,7 +383,7 @@ export default function Prizes() {
               </div>
 
               <ul className="mt-4 space-y-2 text-sm font-mono text-white/60 tracking-wide">
-                <li>Physical Certificate</li>
+                <li>Bronze Medal</li>
                 <li>E-Certificate</li>
               </ul>
             </div>
