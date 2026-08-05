@@ -95,7 +95,7 @@ export default function Registration() {
               variants={itemVariants}
               className="text-gray-400 text-sm md:text-base leading-relaxed font-sans max-w-xl mt-2 text-center"
             >
-              Join hundreds of developers, designers and innovators for 24 hours of
+              Join hundreds of developers, designers and innovators for 6 hours of
               collaboration, learning and creation.
             </motion.p>
 
