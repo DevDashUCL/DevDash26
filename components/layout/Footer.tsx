@@ -69,7 +69,7 @@ export default function Footer() {
               className="h-14 w-auto object-contain object-left"
             />
             <p className="text-sm leading-relaxed">
-              DevDash&apos;26 is the premier hackathon hosted by the UCL Computer Science Community, bringing together the brightest minds to build the future of tech.
+              DevDash&apos;26 is the premier hackathon hosted by the Computer Science Community of UCL, bringing together the brightest minds to build the future of tech.
             </p>
             <div className="flex items-center gap-4 mt-2">
               {socials.map((social, i) => (
