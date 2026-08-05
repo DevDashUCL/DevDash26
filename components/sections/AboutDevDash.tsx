@@ -90,7 +90,6 @@ export default function AboutDevDash() {
             </ScrollFloat>
           </div>
 
-
           {/* Divider Line: Horizontal Two Green Structure */}
           <motion.div variants={itemVariants} className="flex items-center justify-start w-full gap-3 my-2">
             <div className="h-[2px] bg-[#00ef4f] w-[65%]"></div>
@@ -103,10 +102,12 @@ export default function AboutDevDash() {
             className="text-gray-400 text-sm md:text-base leading-relaxed font-sans max-w-xl space-y-4 text-left"
           >
             <p>
-              <span className="text-[#00ef4f] font-medium">DevDash is UCL&apos;s inaugural 24-hour hackathon where innovation meets collaboration</span>, bringing together the next generation of developers, designers, entrepreneurs, and problem solvers. Designed for students of all skill levels, the event provides an opportunity to transform bold ideas into impactful solutions while working alongside talented peers in a fast-paced, collaborative environment.
+              <span className="text-[#00ef4f] font-medium">DevDash is UCL&apos;s inaugural 6-hour hackathon where innovation meets collaboration
+                </span>, 
+                bringing together the next generation of developers, designers, entrepreneurs, and problem solvers. Designed for students of all skill levels, the event provides an opportunity to transform bold ideas into impactful solutions while working alongside talented peers in a fast-paced, collaborative environment.
             </p>
             <p>
-              Throughout the hackathon event, participants will tackle real-world challenges, receive guidance from industry mentors, expand their technical and creative skills, and compete for exciting prizes. Whether you&apos;re building your very first project or pushing the limits of your expertise, DevDash is your chance to learn, network, innovate, and showcase what you can create.
+              Throughout the hackathon event, participants will tackle real-world challenges, expand their technical and creative skills, and compete for exciting prizes. Whether you&apos;re building your very first project or pushing the limits of your expertise, DevDash is your chance to learn, network, innovate, and showcase what you can create.
             </p>
           </motion.div>
 
