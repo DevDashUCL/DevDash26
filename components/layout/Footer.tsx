@@ -16,11 +16,11 @@ export default function Footer() {
     { name: "Register", href: "#register" },
   ];
 
-  const contacts = [
-    // { icon: <Mail className="w-4 h-4" />, text: "contact@devdash26.com", href: "mailto:contact@devdash26.com" },
-    // { icon: <Phone className="w-4 h-4" />, text: "+44 (0) 1234 567890", href: "tel:+94 " },
-    { icon: <MapPin className="w-4 h-4" />, text: "Universal College Lanka", href: "#" },
-  ];
+  // const contacts = [
+  //   // { icon: <Mail className="w-4 h-4" />, text: "contact@devdash26.com", href: "mailto:contact@devdash26.com" },
+  //   // { icon: <Phone className="w-4 h-4" />, text: "+44 (0) 1234 567890", href: "tel:+94 " },
+  //   { icon: <MapPin className="w-4 h-4" />, text: "Universal College Lanka", href: "#" },
+  // ];
 
   const socials = [
     {
@@ -94,7 +94,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Contact Info */}
+          {/* Column 3: Contact Info
           <div className="flex flex-col gap-4">
             <h3 className="text-white font-semibold font-mono tracking-wider text-sm uppercase">Contact Us</h3>
             <ul className="flex flex-col gap-4">
@@ -109,7 +109,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Column 4: Newsletter / Extra */}
           <div className="flex flex-col gap-4">
