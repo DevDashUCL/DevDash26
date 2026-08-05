@@ -237,8 +237,8 @@ export default function Prizes() {
             </span>*/}
 
             <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-wide my-4 font-modern-warfare uppercase leading-relaxed">
-              <span className="text-[#00ef4f] text-2xl sm:text-3xl md:text-4xl">CASH PRIZES AWAIT</span><br />
-              <span className="text-lg sm:text-xl md:text-2xl normal-case font-sans">the 1st place winner!</span>
+              <span className="text-[#00ef4f] text-2xl sm:text-3xl md:text-4xl">WIN A GRAND CASH PRIZE</span><br />
+              <span className="text-lg sm:text-xl md:text-2xl normal-case font-sans">FOR THE 1ST PLACE WINNER</span>
             </h3>
 
             {/* <span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
@@ -290,8 +290,8 @@ export default function Prizes() {
                 <Trophy className="text-[#facc15] w-10 h-10 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]" />
               </div>
 
-              <h4 className="text-xl font-bold text-white tracking-wide uppercase font-modern-warfare mb-1">CHAMPION</h4>
-              <span className="text-white/40 text-xs font-mono tracking-widest font-bold uppercase block mb-4">FIRST PLACE</span>
+              <h4 className="text-xl font-bold text-[#facc15] tracking-wide uppercase font-modern-warfare mb-1">CHAMPION</h4>
+              <span className="text-[#facc15] text-xs font-mono tracking-widest font-bold uppercase block mb-4">FIRST PLACE</span>
 
               <div className="flex items-center justify-center w-full gap-2 my-1 opacity-60">
                 <div className="h-[1px] bg-[#00ef4f]/40 w-10" />
@@ -299,7 +299,7 @@ export default function Prizes() {
                 <div className="h-[1px] bg-[#00ef4f]/40 w-10" />
               </div>
 
-              <ul className="mt-4 space-y-2 text-sm font-mono text-[#00ef4f]/80 tracking-wide">
+              <ul className="mt-4 space-y-2 text-sm font-mono  tracking-wide">
                 <li>Cash Prize</li>
                 <li>Gold Medal</li>
                 <li>E-Certificate</li>
@@ -329,11 +329,11 @@ export default function Prizes() {
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
                 className="w-16 h-18 sm:w-18 sm:h-20 md:w-20 md:h-22 bg-[#00ef4f]/10 border border-[#00ef4f]/30 flex items-center justify-center mb-5"
               >
-                <Trophy className="text-[#00ef4f] w-10 h-10 drop-shadow-[0_0_8px_rgba(0,239,79,0.6)]" />
+                <Trophy className="text-[#C0C0C0] w-10 h-10 drop-shadow-[0_0_8px_rgba(0,239,79,0.6)]" />
               </div>
 
-              <h4 className="text-xl font-bold text-white tracking-wide uppercase font-modern-warfare mb-1">RUNNER-UP</h4>
-              <span className="text-white/40 text-xs font-mono tracking-widest font-bold uppercase block mb-4">SECOND PLACE</span>
+              <h4 className="text-xl font-bold text-[#C0C0C0] tracking-wide uppercase font-modern-warfare mb-1">RUNNER-UP</h4>
+              <span className="text-[#C0C0C0] text-xs font-mono tracking-widest font-bold uppercase block mb-4">SECOND PLACE</span>
 
               <div className="flex items-center justify-center w-full gap-2 my-1 opacity-50">
                 <div className="h-[1px] bg-white/60 w-10" />
@@ -341,7 +341,7 @@ export default function Prizes() {
                 <div className="h-[1px] bg-white/60 w-10" />
               </div>
 
-              <ul className="mt-4 space-y-2 text-sm font-mono text-white/60 tracking-wide">
+              <ul className="mt-4 space-y-2 text-sm font-mono tracking-wide">
                 <li>Silver Medal</li>
                 <li>E-Certificate</li>
               </ul>
@@ -370,11 +370,11 @@ export default function Prizes() {
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
                 className="w-16 h-18 sm:w-18 sm:h-20 md:w-20 md:h-22 bg-white/10 border border-white/30 flex items-center justify-center mb-5"
               >
-                <Trophy className="text-[#cbd5e1] w-10 h-10 drop-shadow-[0_0_12px_rgba(203,213,225,0.6)]" />
+                <Trophy className="text-[#cd7f32] w-10 h-10 drop-shadow-[0_0_12px_rgba(203,213,225,0.6)]" />
               </div>
 
-              <h4 className="text-xl font-bold text-white tracking-wide uppercase font-modern-warfare mb-1">THIRD PLACE</h4>
-              <span className="text-white/40 text-xs font-mono tracking-widest font-bold uppercase block mb-4">THIRD PLACE</span>
+              <h4 className="text-xl font-bold text-[#cd7f32] tracking-wide uppercase font-modern-warfare mb-1">THIRD PLACE</h4>
+              <span className="text-[#cd7f32] text-xs font-mono tracking-widest font-bold uppercase block mb-4">THIRD PLACE</span>
 
               <div className="flex items-center justify-center w-full gap-2 my-1 opacity-50">
                 <div className="h-[1px] bg-white/60 w-10" />
