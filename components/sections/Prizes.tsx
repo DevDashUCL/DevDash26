@@ -241,9 +241,9 @@ export default function Prizes() {
               <span className="text-lg sm:text-xl md:text-2xl normal-case font-sans">the 1st place winner!</span>
             </h3>
 
-            <span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
+            {/* <span className="text-white/40 text-[9px] md:text-[11px] font-mono tracking-[0.25em] font-medium block uppercase">
               2ND &amp; 3RD PLACE RECEIVE CERTIFICATES &bull; ALL PARTICIPANTS RECEIVE E-CERTIFICATES
-            </span>
+            </span> */}
 
             {/* Glowing Animated Progress Bar */}
             {/*<div className="w-full max-w-xl mx-auto h-7 md:h-9 bg-black/50 border border-[#00ef4f]/30 rounded-full overflow-hidden p-1 my-6 relative shadow-[inner_0_2px_4px_rgba(0,0,0,0.5)]">
