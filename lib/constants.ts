@@ -6,7 +6,7 @@ export interface TermLine {
 }
 
 export const TARGET_DATE = new Date("2026-09-19T00:00:00");
-export const REGISTER_URL = "https://forms.gle/e7YfuG6DT2M2aaTNA";
+export const REGISTER_URL = "https://forms.gle/YaikiaabT2vQV3sc7";
 export const FONT_SIZE = 14;
 export const CHARS = "ucldevdash";
 
