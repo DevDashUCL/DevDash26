@@ -51,24 +51,6 @@ export const PROGRAM: ProgramDay[] = [
     sessions: [{ name: "Hackathon", duration: "8h" }],
   },
 ];
-
-// export const TEAM_CARDS = [
-//   {
-//     icon: "\ud83d\udccb",
-//     name: "Shehani Mukadange",
-//     desc: "Event Lead",
-//     email: "shehanikav@gmail.com",
-//     phone: "0742885971",
-//   },
-//   {
-//     icon: "\ud83d\udd04",
-//     name: "Mahdi Hannan",
-//     desc: "Program Coordinator",
-//     email: "hannanmahdi009@gmail.com",
-//     phone: "0773927351",
-//   },
-// ];
-
 export interface Prize {
   award: string;
   recipients: string;
