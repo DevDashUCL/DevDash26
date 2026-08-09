@@ -23,7 +23,7 @@ const BOOT_LINES: BootLine[] = [
     { text: "[    0.289123] usbcore: registered new interface driver usbfs", delay: 50, type: "system" },
     { text: "[    0.412495] EXT4-fs (sda1): mounted filesystem with ordered data mode.", delay: 80, type: "system" },
     { text: "[    0.589124] systemd[1]: Detected architecture x86_64.", delay: 60, type: "system" },
-    { text: "[    0.712495] systemd[1]: Inserted module 'ucl_ict_club'", delay: 80, type: "system" },
+    { text: "[    0.712495] systemd[1]: Inserted module 'Computer Science Community of UCL'", delay: 80, type: "system" },
     { text: "ucl@devdash:~$ ./initialize_hackathon.sh", delay: 500, type: "input" },
     { text: "[    1.129314] Loading DevDash '26 system resources... OK", delay: 180, type: "system" },
     { text: "[    1.482910] Configuring network parameters... OK", delay: 120, type: "system" },
@@ -107,7 +107,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 <div
                     className="absolute inset-0 pointer-events-none z-50 opacity-[0.07]"
                     style={{
-                        background: `linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        background: `linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
                          linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))`,
                         backgroundSize: "100% 4px, 6px 100%"
                     }}
