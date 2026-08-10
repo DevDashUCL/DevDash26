@@ -34,7 +34,7 @@ const BOOT_LINES: BootLine[] = [
     { text: "  [PROGRESS] Reactor Core Power Level: 100% [READY]", delay: 180, type: "success" },
     { text: "[    2.582912] Bootstrapping battle protocols... OK", delay: 200, type: "system" },
     { text: "[    2.891234] Initialization complete. Status: ACTIVE.", delay: 150, type: "success" },
-    { text: "ucl@devdash:~$ echo \"BUILD YOUR TECH!\"", delay: 400, type: "input" },
+    { text: "ucl@devdash:~$ echo \"BUILD YOUR FUTURE\"", delay: 400, type: "input" },
     { text: "BUILD YOUR TECH!", delay: 400, type: "highlight" },
 ];
 
