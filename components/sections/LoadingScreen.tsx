@@ -34,7 +34,7 @@ const BOOT_LINES: BootLine[] = [
     { text: "  [PROGRESS] Reactor Core Power Level: 100% [READY]", delay: 180, type: "success" },
     { text: "[    2.582912] Bootstrapping battle protocols... OK", delay: 200, type: "system" },
     { text: "[    2.891234] Initialization complete. Status: ACTIVE.", delay: 150, type: "success" },
-    { text: "BUILD YOUR FUTURE!", delay: 400, type: "highlight" },
+    { text: "BUILD THE FUTURE!", delay: 400, type: "highlight" },
 ];
 
 export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
