@@ -21,7 +21,7 @@ export const FAQS = [
   {
     question: "Can I participate as an individual or do I need a team?",
     answer:
-      "DevDash'26 is a team based hackathon. Each team must have minimum of 3 members and maximum of 5 members. All participents must register as a team before the registration deadline",
+      "DevDash'26 is a team based hackathon. Each team must have minimum of 3 members and maximum of 5 members. We will team you up if you're registering as an individual. All participants must register before the registration deadline.",
   },
   {
     question: "What should I bring to the hackathon?",
